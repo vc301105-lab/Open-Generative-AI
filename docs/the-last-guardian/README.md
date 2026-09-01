@@ -29,6 +29,10 @@
 | 09 | [Veo-Ready Video Prompts](09-veo-prompts.md) | **One continuity-locked prompt per shot, all 306** *(generated)* |
 | 10 | [Image Prompts & Edit Plan](10-image-prompts-and-edit-plan.md) | Reference-still prompts · location plates · key art · post pipeline · the 10 cuts that matter |
 | 11 | [**How to Generate the Film**](11-how-to-generate.md) | **Start here to actually make it** — Google Flow / Veo and Omni walkthrough, ingredient mapping, QC, the five things that will go wrong |
+| 12 | [**Scene-by-Scene Prompt Sheets**](12-scene-by-scene-prompts.md) | **One sheet per scene, 30 sheets** — establishing still, hero still, whole-scene-in-one-clip, hero clip, full coverage *(generated)* |
+
+### ▶ Scene-by-scene sheets — `prompts-scene/`
+**The easiest way in.** One markdown sheet per scene (`prompts-scene/scene-01.md` … `scene-30.md`). Each sheet is self-contained and ordered the way you actually work: ① the establishing still prompt, ② the hero still prompt, ③ the whole scene as a single 8-second clip, ④ the hero shot at full quality, ⑤ every shot in cut order, clip-sized. Each sheet also lists exactly which approved reference images to attach. Index: [Document 12](12-scene-by-scene-prompts.md).
 
 ### ▶ Paste-ready prompt pack — `prompts-flow/`
 **440 clips, each sized for one 8-second generation.** Open `prompts-flow/scene-01.txt`, copy a block, paste it into Google Flow. Shots longer than 8 seconds are pre-split into evenly sized parts with beat instructions (begin / continue / resolve) so the movement stays unbroken. `prompts-flow/shots.csv` is the same data as a spreadsheet for batch or API work. Full walkthrough in [Document 11](11-how-to-generate.md).
@@ -42,6 +46,9 @@
 | `data/shots-01-10.json` · `data/shots-11-20.json` · `data/shots-21-30.json` | The shot list as structured data — the single source of truth |
 | `data/veo-prompts.jsonl` | 306 rows: `shot_id`, `scene`, `act`, `location`, `duration_seconds`, `aspect_ratio`, `prompt`, `negative_prompt` — ready to feed a batch generation job |
 | `tools/build-prompts.mjs` | Regenerates docs 06 and 09 plus the JSONL from the shot data |
+| `tools/build-flow-pack.mjs` | Regenerates `prompts-flow/` — 440 clip-sized prompts + `shots.csv` |
+| `tools/build-scene-prompts.mjs` | Regenerates `prompts-scene/` and Document 12 — 30 scene sheets |
+| `tools/lib-prompt.mjs` | Shared character cards, location cards, style and negative lines used by both prompt packs |
 
 ### Reference stills
 `reference/` contains approved character, costume, location and key-art references. **These are the ground truth for every generated shot** — condition on the image, never re-prompt from text.
@@ -99,11 +106,12 @@
 
 ```bash
 cd docs/the-last-guardian
-node tools/build-prompts.mjs
-# → 06-shot-list.md, 09-veo-prompts.md, data/veo-prompts.jsonl
+node tools/build-prompts.mjs        # → 06-shot-list.md, 09-veo-prompts.md, data/veo-prompts.jsonl
+node tools/build-flow-pack.mjs      # → prompts-flow/
+node tools/build-scene-prompts.mjs  # → prompts-scene/, 12-scene-by-scene-prompts.md
 ```
 
-Edit the JSON in `data/`, never the generated markdown. Character identity blocks, location sheets, film grammar and the global negative prompt all live at the top of `tools/build-prompts.mjs` — change them there once and all 306 prompts update consistently.
+Edit the JSON in `data/`, never the generated markdown. The compact character and location cards shared by both prompt packs live in `tools/lib-prompt.mjs`; the full archival identity blocks, film grammar and the global negative prompt live at the top of `tools/build-prompts.mjs` — change them there once and all 306 prompts update consistently.
 
 ---
 

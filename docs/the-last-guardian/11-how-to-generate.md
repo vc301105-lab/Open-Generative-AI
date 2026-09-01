@@ -1,5 +1,5 @@
 # THE LAST GUARDIAN — HOW TO GENERATE THE FILM
-### Document 11 of 11 · Paste-ready prompt pack for Google Flow / Veo and Omni
+### Document 11 of 12 · Paste-ready prompt pack for Google Flow / Veo and Omni
 
 ---
 
@@ -7,7 +7,8 @@
 
 | Folder / file | What it is | Use it for |
 |---|---|---|
-| **`prompts-flow/scene-01.txt` … `scene-30.txt`** | One text file per scene, every clip as a clean copy-paste block | **This is the one you want.** Open a scene, copy a block, paste into Flow, generate |
+| **`prompts-scene/scene-01.md` … `scene-30.md`** | One sheet per scene: establishing still ① · hero still ② · whole scene in one clip ③ · hero clip ④ · full coverage ⑤ | **Start here.** Work a sheet top to bottom and the scene is finished. Index: [Document 12](12-scene-by-scene-prompts.md) |
+| `prompts-flow/scene-01.txt` … `scene-30.txt` | The same clip prompts as plain text, no still prompts, no headings | Copy-paste marathons, printing, phone |
 | `prompts-flow/ALL-PROMPTS.txt` | All 440 clips in one file | Bulk work, search, printing |
 | `prompts-flow/shots.csv` | Spreadsheet: `clip_id, scene, shot, clip_of, seconds, location, prompt` | Batch tools, progress tracking, Omni/API automation |
 | `reference/` | 29 approved character, costume and location stills | **Image references — upload these into Flow's "Ingredients"** |
@@ -17,6 +18,21 @@
 **440 clips · 2,594 seconds of generated footage · average prompt 1,143 characters.**
 
 Every shot longer than 8 seconds is already split into evenly-sized parts (a 9-second shot becomes 5s + 4s, never 8s + 1s), and each part carries a beat instruction telling the model whether to *begin*, *continue* or *resolve* the movement.
+
+---
+
+## THE SHORTEST PATH THROUGH A SCENE
+
+Open `prompts-scene/scene-06.md` (or any scene) and work down the page:
+
+1. **① Establishing still** → paste into Omni / your image model. This frame becomes the scene's location lock.
+2. **② Hero still** → same. This is the frame the scene is remembered for.
+3. Approve both. Save them next to the sheet.
+4. **③ Whole scene in one 8-second clip** → paste into Flow with ① attached. You now have an animatic of the scene in one generation. Watch it. If the scene doesn't work here, it won't work at 14 clips either — fix the sheet before spending the generations.
+5. **④ Hero shot** → paste into Flow with ② as the first frame. Full quality, this is the shot that sells the scene.
+6. **⑤ Full coverage** → generate the clips in the order printed, attaching the reference images listed at the top of the sheet.
+
+Steps 1–4 cost four generations per scene — **120 generations gets you the entire film as a watchable animatic** before you commit to the 440-clip finish.
 
 ---
 

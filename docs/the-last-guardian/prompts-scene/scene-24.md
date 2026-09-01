@@ -1,0 +1,108 @@
+# SCENE 24 — THE CROSSING
+
+`EXT. OPEN SEA — THE FLOTILLA`
+
+**Act III** · open sea → LOC-08 ext · dawn · category-five storm, 8m swell · **6 shots / 9 clips / 55s**
+
+**Objective —** Get ninety boats forty kilometres across open water.
+
+**Attach these reference images (Flow → Ingredients, Omni → reference input):**
+
+- `reference/loc-02-the-ark.png` — location lock — LOC-08
+- `reference/char-01-arjun-vedh.png` — Arjun
+- `reference/char-04-riya-sen.png` — Riya
+- `reference/char-12-bhaskar-rele.png` — Bhaskar
+
+---
+
+## ① ESTABLISHING STILL — shot 24C
+
+> Generate this first. It becomes the location lock for every clip in the scene.
+
+```text
+EWS, high, behind, 40mm. Ninety boats in a following line, each one steering by the cyan light ahead of them like a lamp. Setting: open sea → LOC-08 ext. dawn, category-five storm, 8m swell. Light: cyan point source in a black storm. In frame: fleet CG. A single frozen frame, no motion blur on the environment. Cinematic film still from a live-action science-fiction feature, 2.39:1 anamorphic widescreen, shot on 35mm, fine natural grain, photoreal skin texture with pores and sweat, practical in-frame light sources, filmic contrast, muted desaturated palette. No text, no captions, no subtitles, no watermark, no logo, no HUD or UI overlay, no comic-book or concept-art styling, no capes, no full-face masks, no glossy 3D-render look, no extra fingers, no duplicated limbs, no hairstyle changes.
+```
+
+## ② HERO STILL — shot 24E
+
+> The image the scene is remembered for. Use it as the first frame of ④.
+
+```text
+EWS, low, from the water, looking up, 25mm. THE ARK REVEALED: 240 metres of bone-white on four legs, 80m above the sea, immaculate in a black storm, 144 white transmission spines lit along the upper deck. Setting: open sea → LOC-08 ext. dawn, category-five storm, 8m swell. Light: the Ark is self-lit and perfectly even — a clean white object in an filthy black sky. In frame: full CG rig, absolutely spotless, no rust, no rain streaking (the rain does not appear to stick to it). The decisive frame of the moment — everything held at its peak. Cinematic film still from a live-action science-fiction feature, 2.39:1 anamorphic widescreen, shot on 35mm, fine natural grain, photoreal skin texture with pores and sweat, practical in-frame light sources, filmic contrast, muted desaturated palette. No text, no captions, no subtitles, no watermark, no logo, no HUD or UI overlay, no comic-book or concept-art styling, no capes, no full-face masks, no glossy 3D-render look, no extra fingers, no duplicated limbs, no hairstyle changes.
+```
+
+## ③ WHOLE SCENE IN ONE 8-SECOND CLIP
+
+> Fast route — an animatic-grade version of the scene in a single generation.
+
+```text
+One continuous 25mm take, slow rise, compressing the whole scene into eight seconds. Beat 1: Eight-metre swell. Ninety fishing boats, drum-floats, a dredger, six grey Kestrels running low with fans howling. Riya's #6 with the cracked cowling out front. Beat 2: THE ARK REVEALED: 240 metres of bone-white on four legs, 80m above the sea, immaculate in a black storm, 144 white transmission spines lit along the upper deck. Beat 3 (final): 'Look at that thing. It's so clean.' / Meera on the radio: 'That's how you know.'. Bhaskar (44, bald South Indian man, thick grey moustache, gold tooth, tattooed forearms, oily work vest). Arjun (32, South Indian man, lean swimmer's build, deep brown skin, black mid-length hair pushed back with a grey streak at the RIGHT temple, heavy stubble, faint silver branching scars along both forearms). Setting: open sea → LOC-08 ext. dawn, category-five storm, 8m swell. Light: the Ark is self-lit and perfectly even — a clean white object in an filthy black sky. Effect: full CG rig, absolutely spotless, no rust, no rain streaking (the rain does not appear to stick to it). Audio: a rising sub-bass tone from the rig that the storm cannot cover. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles.
+```
+
+## ④ HERO SHOT — S24-24E (EWS, 12s)
+
+```text
+EWS, low, from the water, looking up, 25mm, slow rise. THE ARK REVEALED: 240 metres of bone-white on four legs, 80m above the sea, immaculate in a black storm, 144 white transmission spines lit along the upper deck. Setting: open sea → LOC-08 ext. dawn, category-five storm, 8m swell. Light: the Ark is self-lit and perfectly even — a clean white object in an filthy black sky. Effect: full CG rig, absolutely spotless, no rust, no rain streaking (the rain does not appear to stick to it). Audio: a rising sub-bass tone from the rig that the storm cannot cover. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles.
+```
+
+## ⑤ FULL COVERAGE — 9 clips in cut order
+
+Generate in this order. Each clip is already sized for one Flow / Veo generation.
+
+### S24-24A-a · EWS aerial · 6s · part 1/2
+
+```text
+EWS aerial, drone, low over the swell, 24mm, aerial tracking with the fleet. Eight-metre swell. Ninety fishing boats, drum-floats, a dredger, six grey Kestrels running low with fans howling. Riya's #6 with the cracked cowling out front. Setting: open sea → LOC-08 ext. dawn, category-five storm, 8m swell. Light: storm-dark dawn; every boat lamp a smear; lightning every 9 seconds. Effect: full CG ocean sim; fleet; storm; rain. Audio: the sea; ninety engines; wind at 130km/h. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 1 of 2. Begin the described action; end the clip mid-movement, not on a settle. Use the final frame of part 0 as the starting reference so the move is unbroken.)
+```
+
+### S24-24A-b · EWS aerial · 5s · part 2/2
+
+```text
+EWS aerial, drone, low over the swell, 24mm, aerial tracking with the fleet. Eight-metre swell. Ninety fishing boats, drum-floats, a dredger, six grey Kestrels running low with fans howling. Riya's #6 with the cracked cowling out front. Setting: open sea → LOC-08 ext. dawn, category-five storm, 8m swell. Light: storm-dark dawn; every boat lamp a smear; lightning every 9 seconds. Effect: full CG ocean sim; fleet; storm; rain. Audio: the sea; ninety engines; wind at 130km/h. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 2 of 2. Complete the described action and settle on the final beat. Use the final frame of part 1 as the starting reference so the move is unbroken.)
+```
+
+### S24-24B-a · MS · 5s · part 1/2
+
+```text
+MS, low, on the bow, water-level, 32mm, violently handheld. Arjun in the bow of Bhaskar's boat, teal cloak snapping, one hand flat on the gunwale — ANCHORING the hull every time it should have gone over; cyan pulses along the waterline with each wave. Arjun (32, South Indian man, lean swimmer's build, deep brown skin, black mid-length hair pushed back with a grey streak at the RIGHT temple, heavy stubble, faint silver branching scars along both forearms). Setting: open sea → LOC-08 ext. dawn, category-five storm, 8m swell. Light: cyan pulse as the only steady light; lightning; lamp. Effect: anchoring: cyan hexagon lattice flashing along the hull's waterline on each impact, water deforming around a hull that refuses to roll. Audio: the chime, once per wave, becoming a rhythm. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 1 of 2. Begin the described action; end the clip mid-movement, not on a settle. Use the final frame of part 0 as the starting reference so the move is unbroken.)
+```
+
+### S24-24B-b · MS · 5s · part 2/2
+
+```text
+MS, low, on the bow, water-level, 32mm, violently handheld. Arjun in the bow of Bhaskar's boat, teal cloak snapping, one hand flat on the gunwale — ANCHORING the hull every time it should have gone over; cyan pulses along the waterline with each wave. Arjun (32, South Indian man, lean swimmer's build, deep brown skin, black mid-length hair pushed back with a grey streak at the RIGHT temple, heavy stubble, faint silver branching scars along both forearms). Setting: open sea → LOC-08 ext. dawn, category-five storm, 8m swell. Light: cyan pulse as the only steady light; lightning; lamp. Effect: anchoring: cyan hexagon lattice flashing along the hull's waterline on each impact, water deforming around a hull that refuses to roll. Audio: the chime, once per wave, becoming a rhythm. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 2 of 2. Complete the described action and settle on the final beat. Use the final frame of part 1 as the starting reference so the move is unbroken.)
+```
+
+### S24-24C · EWS · 8s
+
+```text
+EWS, high, behind, 40mm, locked-off, no camera movement. Ninety boats in a following line, each one steering by the cyan light ahead of them like a lamp. Setting: open sea → LOC-08 ext. dawn, category-five storm, 8m swell. Light: cyan point source in a black storm. Effect: fleet CG. Audio: the Fleet theme rising under the storm. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles.
+```
+
+### S24-24D · CU · 6s
+
+```text
+CU, eye, 85mm, handheld. Riya in skiff #6, orange flotation vest, braid plastered, water pouring off her, flying by hand in a category five. Riya (34, Bengali-Indian woman, athletic, storm-grey military command coat with oxblood shoulder piping, black hair). Setting: open sea → LOC-08 ext. dawn, category-five storm, 8m swell. Light: instrument glow, lightning. Effect: rain interaction. Audio: fan scream; her breathing steady. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles.
+```
+
+### S24-24E-a · EWS · 6s · part 1/2
+
+```text
+EWS, low, from the water, looking up, 25mm, slow rise. THE ARK REVEALED: 240 metres of bone-white on four legs, 80m above the sea, immaculate in a black storm, 144 white transmission spines lit along the upper deck. Setting: open sea → LOC-08 ext. dawn, category-five storm, 8m swell. Light: the Ark is self-lit and perfectly even — a clean white object in an filthy black sky. Effect: full CG rig, absolutely spotless, no rust, no rain streaking (the rain does not appear to stick to it). Audio: a rising sub-bass tone from the rig that the storm cannot cover. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 1 of 2. Begin the described action; end the clip mid-movement, not on a settle. Use the final frame of part 0 as the starting reference so the move is unbroken.)
+```
+
+### S24-24E-b · EWS · 6s · part 2/2
+
+```text
+EWS, low, from the water, looking up, 25mm, slow rise. THE ARK REVEALED: 240 metres of bone-white on four legs, 80m above the sea, immaculate in a black storm, 144 white transmission spines lit along the upper deck. Setting: open sea → LOC-08 ext. dawn, category-five storm, 8m swell. Light: the Ark is self-lit and perfectly even — a clean white object in an filthy black sky. Effect: full CG rig, absolutely spotless, no rust, no rain streaking (the rain does not appear to stick to it). Audio: a rising sub-bass tone from the rig that the storm cannot cover. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 2 of 2. Complete the described action and settle on the final beat. Use the final frame of part 1 as the starting reference so the move is unbroken.)
+```
+
+### S24-24F · MS 2-shot · 8s
+
+```text
+MS 2-shot, eye, 50mm, handheld. 'Look at that thing. It's so clean.' / Meera on the radio: 'That's how you know.'. Bhaskar (44, bald South Indian man, thick grey moustache, gold tooth, tattooed forearms, oily work vest). Arjun (32, South Indian man, lean swimmer's build, deep brown skin, black mid-length hair pushed back with a grey streak at the RIGHT temple, heavy stubble, faint silver branching scars along both forearms). Setting: open sea → LOC-08 ext. dawn, category-five storm, 8m swell. Light: the Ark's white bounce now keying their faces from ahead. Audio: radio distortion; the storm. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles.
+```
+
+---
+
+Prev: [Scene 23](scene-23.md) · Next: [Scene 25](scene-25.md) · [All sheets](../12-scene-by-scene-prompts.md)

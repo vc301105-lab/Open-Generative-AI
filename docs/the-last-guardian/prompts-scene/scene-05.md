@@ -1,0 +1,113 @@
+# SCENE 05 — WARD 12 / THE NOTEBOOK
+
+`INT. WARD 12 — MEERA'S CLINIC`
+
+**Act I** · LOC-04 · night · rain on steel roof · **8 shots / 10 clips / 61s**
+
+**Objective —** Arjun wants a recalibration and no conversation; Meera insists on the conversation.
+
+**Attach these reference images (Flow → Ingredients, Omni → reference input):**
+
+- `reference/loc-06-ward-12-clinic.png` — location lock — LOC-04
+- `reference/char-01-arjun-vedh.png` — Arjun
+- `reference/char-06-meera-sanyal.png` — Meera
+
+---
+
+## ① ESTABLISHING STILL — shot 5A
+
+> Generate this first. It becomes the location lock for every clip in the scene.
+
+```text
+WS, wide, slightly high, 25mm. The L of welded containers: index-card wall, fishless aquarium glowing green, x-ray film curtain, Arjun in the repurposed dental chair, Meera working at his C7 with a soldering iron. Arjun (32, South Indian man, lean swimmer's build, deep brown skin, black mid-length hair pushed back with a grey streak at the RIGHT temple, heavy stubble, faint silver branching scars along both forearms). Meera (61, small Bengali woman, cropped grey-white hair, glasses on a beaded chain, her LEFT arm a brass mechanical prosthetic, indigo kurta and canvas apron). Setting: Ward 12, a clinic of three welded shipping containers: a dental chair, pegboard walls of brass instruments, a wall of ten thousand index cards, a fishless aquarium glowing green. night, rain on steel roof. Light: two hard 5600K surgical lamps, one warm desk lamp, green aquarium glow. A single frozen frame, no motion blur on the environment. Cinematic film still from a live-action science-fiction feature, 2.39:1 anamorphic widescreen, shot on 35mm, fine natural grain, photoreal skin texture with pores and sweat, practical in-frame light sources, filmic contrast, muted desaturated palette. No text, no captions, no subtitles, no watermark, no logo, no HUD or UI overlay, no comic-book or concept-art styling, no capes, no full-face masks, no glossy 3D-render look, no extra fingers, no duplicated limbs, no hairstyle changes.
+```
+
+## ② HERO STILL — shot 5B
+
+> The image the scene is remembered for. Use it as the first frame of ④.
+
+```text
+ECU, macro on the neck, 100mm macro. The copper stabiliser disc taped over his C7; silver-grey dendritic Threadwork radiating from beneath it across his back. Arjun (32, South Indian man, lean swimmer's build, deep brown skin, black mid-length hair pushed back with a grey streak at the RIGHT temple, heavy stubble, faint silver branching scars along both forearms). Setting: Ward 12, a clinic of three welded shipping containers: a dental chair, pegboard walls of brass instruments, a wall of ten thousand index cards, a fishless aquarium glowing green. night, rain on steel roof. Light: hard surgical key, deep falloff. In frame: Threadwork: fine sub-dermal dendritic filament, matte silver-grey, dormant, no emission. The decisive frame of the moment — everything held at its peak. Cinematic film still from a live-action science-fiction feature, 2.39:1 anamorphic widescreen, shot on 35mm, fine natural grain, photoreal skin texture with pores and sweat, practical in-frame light sources, filmic contrast, muted desaturated palette. No text, no captions, no subtitles, no watermark, no logo, no HUD or UI overlay, no comic-book or concept-art styling, no capes, no full-face masks, no glossy 3D-render look, no extra fingers, no duplicated limbs, no hairstyle changes.
+```
+
+## ③ WHOLE SCENE IN ONE 8-SECOND CLIP
+
+> Fast route — an animatic-grade version of the scene in a single generation.
+
+```text
+One continuous 100mm macro take, locked-off, compressing the whole scene into eight seconds. Beat 1: The L of welded containers: index-card wall, fishless aquarium glowing green, x-ray film curtain, Arjun in the repurposed dental chair, Meera working at his C7 with a. Beat 2: The copper stabiliser disc taped over his C7; silver-grey dendritic Threadwork radiating from beneath it across his back. Beat 3 (final): Meera goes absolutely still. Her brass hand closes. 'Then something in the Cradle is calling its hardware home.'. Arjun (32, South Indian man, lean swimmer's build, deep brown skin, black mid-length hair pushed back with a grey streak at the RIGHT temple, heavy stubble, faint silver branching scars along both forearms). Meera (61, small Bengali woman, cropped grey-white hair, glasses on a beaded chain, her LEFT arm a brass mechanical prosthetic, indigo kurta and canvas apron). Setting: Ward 12, a clinic of three welded shipping containers: a dental chair, pegboard walls of brass instruments, a wall of ten thousand index cards, a fishless aquarium glowing green. night, rain on steel roof. Light: hard surgical key, deep falloff. Effect: Threadwork: fine sub-dermal dendritic filament, matte silver-grey, dormant, no emission. Audio: solder, breath. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles.
+```
+
+## ④ HERO SHOT — S05-5B (ECU, 6s)
+
+```text
+ECU, macro on the neck, 100mm macro, locked-off, no camera movement. The copper stabiliser disc taped over his C7; silver-grey dendritic Threadwork radiating from beneath it across his back. Arjun (32, South Indian man, lean swimmer's build, deep brown skin, black mid-length hair pushed back with a grey streak at the RIGHT temple, heavy stubble, faint silver branching scars along both forearms). Setting: Ward 12, a clinic of three welded shipping containers: a dental chair, pegboard walls of brass instruments, a wall of ten thousand index cards, a fishless aquarium glowing green. night, rain on steel roof. Light: hard surgical key, deep falloff. Effect: Threadwork: fine sub-dermal dendritic filament, matte silver-grey, dormant, no emission. Audio: solder, breath. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles.
+```
+
+## ⑤ FULL COVERAGE — 10 clips in cut order
+
+Generate in this order. Each clip is already sized for one Flow / Veo generation.
+
+### S05-5A · WS · 8s
+
+```text
+WS, wide, slightly high, 25mm, slow push in. The L of welded containers: index-card wall, fishless aquarium glowing green, x-ray film curtain, Arjun in the repurposed dental chair, Meera working at his C7 with a soldering iron. Arjun (32, South Indian man, lean swimmer's build, deep brown skin, black mid-length hair pushed back with a grey streak at the RIGHT temple, heavy stubble, faint silver branching scars along both forearms). Meera (61, small Bengali woman, cropped grey-white hair, glasses on a beaded chain, her LEFT arm a brass mechanical prosthetic, indigo kurta and canvas apron). Setting: Ward 12, a clinic of three welded shipping containers: a dental chair, pegboard walls of brass instruments, a wall of ten thousand index cards, a fishless aquarium glowing green. night, rain on steel roof. Light: two hard 5600K surgical lamps, one warm desk lamp, green aquarium glow. Audio: rain on steel roof, solder hiss. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles.
+```
+
+### S05-5B · ECU · 6s
+
+```text
+ECU, macro on the neck, 100mm macro, locked-off, no camera movement. The copper stabiliser disc taped over his C7; silver-grey dendritic Threadwork radiating from beneath it across his back. Arjun (32, South Indian man, lean swimmer's build, deep brown skin, black mid-length hair pushed back with a grey streak at the RIGHT temple, heavy stubble, faint silver branching scars along both forearms). Setting: Ward 12, a clinic of three welded shipping containers: a dental chair, pegboard walls of brass instruments, a wall of ten thousand index cards, a fishless aquarium glowing green. night, rain on steel roof. Light: hard surgical key, deep falloff. Effect: Threadwork: fine sub-dermal dendritic filament, matte silver-grey, dormant, no emission. Audio: solder, breath. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles.
+```
+
+### S05-5C-a · insert · 5s · part 1/2
+
+```text
+insert, directly overhead, locked, 40mm macro, locked-off, no camera movement. THE NOTEBOOK — waterlogged leather, black elastic band, opened flat. Handwritten rules legible: 'Your sister was called Ila. She drew fish.' / 'You are NOT ALLOWED to use the current.'. Setting: Ward 12, a clinic of three welded shipping containers: a dental chair, pegboard walls of brass instruments, a wall of ten thousand index cards, a fishless aquarium glowing green. night, rain on steel roof. Light: warm desk lamp only, single soft source. Audio: page turn; rain. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 1 of 2. Begin the described action; end the clip mid-movement, not on a settle. Use the final frame of part 0 as the starting reference so the move is unbroken.)
+```
+
+### S05-5C-b · insert · 4s · part 2/2
+
+```text
+insert, directly overhead, locked, 40mm macro, locked-off, no camera movement. THE NOTEBOOK — waterlogged leather, black elastic band, opened flat. Handwritten rules legible: 'Your sister was called Ila. She drew fish.' / 'You are NOT ALLOWED to use the current.'. Setting: Ward 12, a clinic of three welded shipping containers: a dental chair, pegboard walls of brass instruments, a wall of ten thousand index cards, a fishless aquarium glowing green. night, rain on steel roof. Light: warm desk lamp only, single soft source. Audio: page turn; rain. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 2 of 2. Complete the described action and settle on the final beat. Use the final frame of part 1 as the starting reference so the move is unbroken.)
+```
+
+### S05-5D · insert · 5s
+
+```text
+insert, directly overhead, 40mm macro, locked-off, no camera movement. Meera's brass prosthetic fingers turning to a section of NINE TORN-OUT PAGE STUBS. Setting: Ward 12, a clinic of three welded shipping containers: a dental chair, pegboard walls of brass instruments, a wall of ten thousand index cards, a fishless aquarium glowing green. night, rain on steel roof. Light: same warm lamp; the prosthetic glows faint amber at the knuckle channels. Effect: prosthetic filament glow. Audio: paper, and the prosthetic's small servo. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles.
+```
+
+### S05-5E-a · MS 2-shot · 7s · part 1/2
+
+```text
+MS 2-shot, eye, 50mm, locked-off, no camera movement. 'How much of last month.' The noodle-stall speech. Arjun entirely calm while describing his own erasure. Arjun (32, South Indian man, lean swimmer's build, deep brown skin, black mid-length hair pushed back with a grey streak at the RIGHT temple, heavy stubble, faint silver branching scars along both forearms). Meera (61, small Bengali woman, cropped grey-white hair, glasses on a beaded chain, her LEFT arm a brass mechanical prosthetic, indigo kurta and canvas apron). Setting: Ward 12, a clinic of three welded shipping containers: a dental chair, pegboard walls of brass instruments, a wall of ten thousand index cards, a fishless aquarium glowing green. night, rain on steel roof. Light: warm desk lamp key on Arjun, surgical lamp edge on Meera. Audio: rain only under dialogue; no score. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 1 of 2. Begin the described action; end the clip mid-movement, not on a settle. Use the final frame of part 0 as the starting reference so the move is unbroken.)
+```
+
+### S05-5E-b · MS 2-shot · 7s · part 2/2
+
+```text
+MS 2-shot, eye, 50mm, locked-off, no camera movement. 'How much of last month.' The noodle-stall speech. Arjun entirely calm while describing his own erasure. Arjun (32, South Indian man, lean swimmer's build, deep brown skin, black mid-length hair pushed back with a grey streak at the RIGHT temple, heavy stubble, faint silver branching scars along both forearms). Meera (61, small Bengali woman, cropped grey-white hair, glasses on a beaded chain, her LEFT arm a brass mechanical prosthetic, indigo kurta and canvas apron). Setting: Ward 12, a clinic of three welded shipping containers: a dental chair, pegboard walls of brass instruments, a wall of ten thousand index cards, a fishless aquarium glowing green. night, rain on steel roof. Light: warm desk lamp key on Arjun, surgical lamp edge on Meera. Audio: rain only under dialogue; no score. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 2 of 2. Complete the described action and settle on the final beat. Use the final frame of part 1 as the starting reference so the move is unbroken.)
+```
+
+### S05-5F · CU · 6s
+
+```text
+CU, eye, 85mm, very slow push. Meera puts the iron down. Her prosthetic hums amber with fatigue. 'It's accelerating.'. Meera (61, small Bengali woman, cropped grey-white hair, glasses on a beaded chain, her LEFT arm a brass mechanical prosthetic, indigo kurta and canvas apron). Setting: Ward 12, a clinic of three welded shipping containers: a dental chair, pegboard walls of brass instruments, a wall of ten thousand index cards, a fishless aquarium glowing green. night, rain on steel roof. Light: green aquarium fill on her left, warm key right. Effect: prosthetic glow. Audio: the hum of the arm. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles.
+```
+
+### S05-5G · insert · 5s
+
+```text
+insert, eye, table level, 85mm, locked-off, no camera movement. The anchor-stone set on the bench. It pulses. Amber. Once. Twice. Setting: Ward 12, a clinic of three welded shipping containers: a dental chair, pegboard walls of brass instruments, a wall of ten thousand index cards, a fishless aquarium glowing green. night, rain on steel roof. Light: self-lit. Effect: anchor-stone pulse. Audio: the 1Hz bell. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles.
+```
+
+### S05-5H · CU · 8s
+
+```text
+CU, eye, 75mm, locked-off, no camera movement. Meera goes absolutely still. Her brass hand closes. 'Then something in the Cradle is calling its hardware home.'. Meera (61, small Bengali woman, cropped grey-white hair, glasses on a beaded chain, her LEFT arm a brass mechanical prosthetic, indigo kurta and canvas apron). Setting: Ward 12, a clinic of three welded shipping containers: a dental chair, pegboard walls of brass instruments, a wall of ten thousand index cards, a fishless aquarium glowing green. night, rain on steel roof. Light: amber pulse now keying her face, green fill dying. Effect: interactive pulse. Audio: score enters for the first time: a single low cello note. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles.
+```
+
+---
+
+Prev: [Scene 04](scene-04.md) · Next: [Scene 06](scene-06.md) · [All sheets](../12-scene-by-scene-prompts.md)

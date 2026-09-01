@@ -1,0 +1,192 @@
+# SCENE 28 — THE LOOM (CLIMAX A)
+
+`INT. THE CRADLE LOOM`
+
+**Act III** · LOC-09 · — · — · **14 shots / 23 clips / 141s**
+
+**Objective —** Arjun must stop a man who is stronger, unkillable, and not wrong.
+
+**Attach these reference images (Flow → Ingredients, Omni → reference input):**
+
+- `reference/loc-03-cradle-loom.png` — location lock — LOC-09
+- `reference/char-03-dev-aranya.png` — Dev / the Hollow
+- `reference/char-01-arjun-vedh.png` — Arjun
+- `reference/char-09-amara-okonkwo.png` — Amara
+
+---
+
+## ① ESTABLISHING STILL — shot 28A
+
+> Generate this first. It becomes the location lock for every clip in the scene.
+
+```text
+EWS, extreme wide, low, looking up, 21mm. A 200-metre geode: standing crystal filament floor to ceiling like the strings of a stadium-sized harp; a brass ring platform at the centre; a single catwalk in. Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: fully emissive walls — white-blue, rising; there are no lamps anywhere in this location. In frame: the Loom: full CG cavity, 40,000 crystal strings with individual light propagation. A single frozen frame, no motion blur on the environment. Cinematic film still from a live-action science-fiction feature, 2.39:1 anamorphic widescreen, shot on 35mm, fine natural grain, photoreal skin texture with pores and sweat, practical in-frame light sources, filmic contrast, muted desaturated palette. No text, no captions, no subtitles, no watermark, no logo, no HUD or UI overlay, no comic-book or concept-art styling, no capes, no full-face masks, no glossy 3D-render look, no extra fingers, no duplicated limbs, no hairstyle changes.
+```
+
+## ② HERO STILL — shot 28A
+
+> The image the scene is remembered for. Use it as the first frame of ④.
+
+```text
+EWS, extreme wide, low, looking up, 21mm. A 200-metre geode: standing crystal filament floor to ceiling like the strings of a stadium-sized harp; a brass ring platform at the centre; a single catwalk in. Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: fully emissive walls — white-blue, rising; there are no lamps anywhere in this location. In frame: the Loom: full CG cavity, 40,000 crystal strings with individual light propagation. The decisive frame of the moment — everything held at its peak. Cinematic film still from a live-action science-fiction feature, 2.39:1 anamorphic widescreen, shot on 35mm, fine natural grain, photoreal skin texture with pores and sweat, practical in-frame light sources, filmic contrast, muted desaturated palette. No text, no captions, no subtitles, no watermark, no logo, no HUD or UI overlay, no comic-book or concept-art styling, no capes, no full-face masks, no glossy 3D-render look, no extra fingers, no duplicated limbs, no hairstyle changes.
+```
+
+## ③ WHOLE SCENE IN ONE 8-SECOND CLIP
+
+> Fast route — an animatic-grade version of the scene in a single generation.
+
+```text
+One continuous 21mm take, slow crane up, compressing the whole scene into eight seconds. Beat 1: A 200-metre geode: standing crystal filament floor to ceiling like the strings of a stadium-sized harp; a brass ring platform at the centre; a single catwalk in. Beat 2 (final): 'Oh. Oh, there you are.' Above him, eight million minds hang half-woven. Dev (58, South Indian man, tall and broad, grey beard, iron-grey hair swept back, LEFT eye brown and RIGHT eye crystalline white-blue, translucent crystal spreading from his left jaw down his neck, long plain charcoal coat, cracked bronze gorget, wedding band on a chain, barefoot). Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: fully emissive walls — white-blue, rising; there are no lamps anywhere in this location. Effect: the Loom: full CG cavity, 40,000 crystal strings with individual light propagation. Audio: 38Hz in every frame; the strings ringing faintly when the air moves. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles.
+```
+
+## ④ HERO SHOT — S28-28A (EWS, 12s)
+
+```text
+EWS, extreme wide, low, looking up, 21mm, slow crane up. A 200-metre geode: standing crystal filament floor to ceiling like the strings of a stadium-sized harp; a brass ring platform at the centre; a single catwalk in. Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: fully emissive walls — white-blue, rising; there are no lamps anywhere in this location. Effect: the Loom: full CG cavity, 40,000 crystal strings with individual light propagation. Audio: 38Hz in every frame; the strings ringing faintly when the air moves. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles.
+```
+
+## ⑤ FULL COVERAGE — 23 clips in cut order
+
+Generate in this order. Each clip is already sized for one Flow / Veo generation.
+
+### S28-28A-a · EWS · 6s · part 1/2
+
+```text
+EWS, extreme wide, low, looking up, 21mm, slow crane up. A 200-metre geode: standing crystal filament floor to ceiling like the strings of a stadium-sized harp; a brass ring platform at the centre; a single catwalk in. Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: fully emissive walls — white-blue, rising; there are no lamps anywhere in this location. Effect: the Loom: full CG cavity, 40,000 crystal strings with individual light propagation. Audio: 38Hz in every frame; the strings ringing faintly when the air moves. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 1 of 2. Begin the described action; end the clip mid-movement, not on a settle. Use the final frame of part 0 as the starting reference so the move is unbroken.)
+```
+
+### S28-28A-b · EWS · 6s · part 2/2
+
+```text
+EWS, extreme wide, low, looking up, 21mm, slow crane up. A 200-metre geode: standing crystal filament floor to ceiling like the strings of a stadium-sized harp; a brass ring platform at the centre; a single catwalk in. Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: fully emissive walls — white-blue, rising; there are no lamps anywhere in this location. Effect: the Loom: full CG cavity, 40,000 crystal strings with individual light propagation. Audio: 38Hz in every frame; the strings ringing faintly when the air moves. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 2 of 2. Complete the described action and settle on the final beat. Use the final frame of part 1 as the starting reference so the move is unbroken.)
+```
+
+### S28-28B-a · MS · 5s · part 1/2
+
+```text
+MS, eye, 50mm, slow push. Dev at the spindle, weaving eight million people BY HAND, crudely — and it is killing him. CRYSTALLISATION STAGE 4: left hand entirely crystal and CRACKING. Dev (58, South Indian man, tall and broad, grey beard, iron-grey hair swept back, LEFT eye brown and RIGHT eye crystalline white-blue, translucent crystal spreading from his left jaw down his neck, long plain charcoal coat, cracked bronze gorget, wedding band on a chain, barefoot). Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: the spindle white-blue from below. Effect: Stage 4 with fracture propagation across the crystal in real time. Audio: crystal cracking, small and constant, under everything. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 1 of 2. Begin the described action; end the clip mid-movement, not on a settle. Use the final frame of part 0 as the starting reference so the move is unbroken.)
+```
+
+### S28-28B-b · MS · 4s · part 2/2
+
+```text
+MS, eye, 50mm, slow push. Dev at the spindle, weaving eight million people BY HAND, crudely — and it is killing him. CRYSTALLISATION STAGE 4: left hand entirely crystal and CRACKING. Dev (58, South Indian man, tall and broad, grey beard, iron-grey hair swept back, LEFT eye brown and RIGHT eye crystalline white-blue, translucent crystal spreading from his left jaw down his neck, long plain charcoal coat, cracked bronze gorget, wedding band on a chain, barefoot). Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: the spindle white-blue from below. Effect: Stage 4 with fracture propagation across the crystal in real time. Audio: crystal cracking, small and constant, under everything. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 2 of 2. Complete the described action and settle on the final beat. Use the final frame of part 1 as the starting reference so the move is unbroken.)
+```
+
+### S28-28C · WS · 8s
+
+```text
+WS, low, along the catwalk, 32mm, steadicam follow. Arjun walks the catwalk: torn mantle, dead left arm, blood, one working hand. Arjun (32, South Indian man, lean swimmer's build, deep brown skin, black mid-length hair pushed back with a grey streak at the RIGHT temple, heavy stubble, faint silver branching scars along both forearms). Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: emissive walls rimming him on both sides, no key at all on his face. Audio: his boots on brass; the hum. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles.
+```
+
+### S28-28D · WS · 8s
+
+```text
+WS, eye, 40mm, locked-off, no camera movement. BEAT ONE: Arjun builds a bastion. Dev makes a ROOM out of light around it and the bastion shatters like a teacup. 'I taught you that.'. Arjun (32, South Indian man, lean swimmer's build, deep brown skin, black mid-length hair pushed back with a grey streak at the RIGHT temple, heavy stubble, faint silver branching scars along both forearms). Dev (58, South Indian man, tall and broad, grey beard, iron-grey hair swept back, LEFT eye brown and RIGHT eye crystalline white-blue, translucent crystal spreading from his left jaw down his neck, long plain charcoal coat, cracked bronze gorget, wedding band on a chain, barefoot). Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: cyan, then engulfed in white-blue architecture. Effect: Dev's Loom-class construction appears FULLY FORMED in one frame (he never builds), enclosing and crushing Arjun's cyan geometry. Audio: chime; then a cathedral-sized chord; then breaking glass. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles.
+```
+
+### S28-28E · MS · 6s
+
+```text
+MS, low, 40mm, handheld. BEAT TWO: Arjun drives a bastion up through the platform; Dev unmakes it with a gesture. 'And that.'. Arjun (32, South Indian man, lean swimmer's build, deep brown skin, black mid-length hair pushed back with a grey streak at the RIGHT temple, heavy stubble, faint silver branching scars along both forearms). Dev (58, South Indian man, tall and broad, grey beard, iron-grey hair swept back, LEFT eye brown and RIGHT eye crystalline white-blue, translucent crystal spreading from his left jaw down his neck, long plain charcoal coat, cracked bronze gorget, wedding band on a chain, barefoot). Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: cyan, unmade. Effect: de-construction — the tessellation running backwards. Audio: the chime played backwards, cleanly. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles.
+```
+
+### S28-28F · MS · 8s
+
+```text
+MS, eye, 50mm, slow steadicam. Arjun STOPS. He walks the last twenty metres with his hands open. Arjun (32, South Indian man, lean swimmer's build, deep brown skin, black mid-length hair pushed back with a grey streak at the RIGHT temple, heavy stubble, faint silver branching scars along both forearms). Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: emissive white-blue. Audio: the fighting sounds stop; only the hum. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles.
+```
+
+### S28-28G-a · CU · 8s · part 1/2
+
+```text
+CU, eye, 85mm, locked-off, no camera movement. 'You're right. I've had twelve years of your cure by accident. It's the worst thing that has ever happened to anyone, and I'm the only man alive who can tell you that from the inside, and you never once asked me.'. Arjun (32, South Indian man, lean swimmer's build, deep brown skin, black mid-length hair pushed back with a grey streak at the RIGHT temple, heavy stubble, faint silver branching scars along both forearms). Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: white-blue, no fill. Audio: no score. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 1 of 2. Begin the described action; end the clip mid-movement, not on a settle. Use the final frame of part 0 as the starting reference so the move is unbroken.)
+```
+
+### S28-28G-b · CU · 8s · part 2/2
+
+```text
+CU, eye, 85mm, locked-off, no camera movement. 'You're right. I've had twelve years of your cure by accident. It's the worst thing that has ever happened to anyone, and I'm the only man alive who can tell you that from the inside, and you never once asked me.'. Arjun (32, South Indian man, lean swimmer's build, deep brown skin, black mid-length hair pushed back with a grey streak at the RIGHT temple, heavy stubble, faint silver branching scars along both forearms). Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: white-blue, no fill. Audio: no score. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 2 of 2. Complete the described action and settle on the final beat. Use the final frame of part 1 as the starting reference so the move is unbroken.)
+```
+
+### S28-28H-a · CU · 5s · part 1/2
+
+```text
+CU, eye, 85mm, locked-off, no camera movement. Hands still on the spindle: 'Because the alternative is the shaft. The alternative is a boy who loved me pulling a ring.'. Dev (58, South Indian man, tall and broad, grey beard, iron-grey hair swept back, LEFT eye brown and RIGHT eye crystalline white-blue, translucent crystal spreading from his left jaw down his neck, long plain charcoal coat, cracked bronze gorget, wedding band on a chain, barefoot). Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: white-blue, crystal refracting. Effect: crystallisation. Audio: crystal cracking. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 1 of 2. Begin the described action; end the clip mid-movement, not on a settle. Use the final frame of part 0 as the starting reference so the move is unbroken.)
+```
+
+### S28-28H-b · CU · 4s · part 2/2
+
+```text
+CU, eye, 85mm, locked-off, no camera movement. Hands still on the spindle: 'Because the alternative is the shaft. The alternative is a boy who loved me pulling a ring.'. Dev (58, South Indian man, tall and broad, grey beard, iron-grey hair swept back, LEFT eye brown and RIGHT eye crystalline white-blue, translucent crystal spreading from his left jaw down his neck, long plain charcoal coat, cracked bronze gorget, wedding band on a chain, barefoot). Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: white-blue, crystal refracting. Effect: crystallisation. Audio: crystal cracking. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 2 of 2. Complete the described action and settle on the final beat. Use the final frame of part 1 as the starting reference so the move is unbroken.)
+```
+
+### S28-28I · insert · 6s
+
+```text
+insert, macro on the open palm, 100mm macro, locked-off, no camera movement. The anchor-stone held open on Arjun's palm — offered the way you'd offer food. Not a weapon. Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: white-blue with the stone's amber. Effect: pulse. Audio: the 1Hz bell against the 38Hz hum. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles.
+```
+
+### S28-28J-a · MS 2-shot · 7s · part 1/2
+
+```text
+MS 2-shot, eye, 50mm, very slow push. 'Amara was a carrier, Dev. She's in here. All of her. I'm giving it back so you know what you're selling.' / 'Arjun. Don't.'. Arjun (32, South Indian man, lean swimmer's build, deep brown skin, black mid-length hair pushed back with a grey streak at the RIGHT temple, heavy stubble, faint silver branching scars along both forearms). Dev (58, South Indian man, tall and broad, grey beard, iron-grey hair swept back, LEFT eye brown and RIGHT eye crystalline white-blue, translucent crystal spreading from his left jaw down his neck, long plain charcoal coat, cracked bronze gorget, wedding band on a chain, barefoot). Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: white-blue. Effect: crystallisation. Audio: Dev afraid for the first time. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 1 of 2. Begin the described action; end the clip mid-movement, not on a settle. Use the final frame of part 0 as the starting reference so the move is unbroken.)
+```
+
+### S28-28J-b · MS 2-shot · 6s · part 2/2
+
+```text
+MS 2-shot, eye, 50mm, very slow push. 'Amara was a carrier, Dev. She's in here. All of her. I'm giving it back so you know what you're selling.' / 'Arjun. Don't.'. Arjun (32, South Indian man, lean swimmer's build, deep brown skin, black mid-length hair pushed back with a grey streak at the RIGHT temple, heavy stubble, faint silver branching scars along both forearms). Dev (58, South Indian man, tall and broad, grey beard, iron-grey hair swept back, LEFT eye brown and RIGHT eye crystalline white-blue, translucent crystal spreading from his left jaw down his neck, long plain charcoal coat, cracked bronze gorget, wedding band on a chain, barefoot). Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: white-blue. Effect: crystallisation. Audio: Dev afraid for the first time. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 2 of 2. Complete the described action and settle on the final beat. Use the final frame of part 1 as the starting reference so the move is unbroken.)
+```
+
+### S28-28K · ECU · 5s
+
+```text
+ECU, macro, 100mm macro, locked-off, no camera movement. The stone pressed against the crystalline plate of Dev's chest. IT OPENS. Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: amber flooding into white-blue. Effect: the stone's light entering crystal tissue and propagating through it like ink in water. Audio: everything stops. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles.
+```
+
+### S28-28L-a · MEMORY SEQUENCE · 8s · part 1/3
+
+```text
+MEMORY SEQUENCE, handheld, warm, intimate, first-person-adjacent, 35mm, loose handheld — the only warm handheld in Act III. THE FILM GOES SILENT AND WARM: Anjari market 14:11, real, unedited, from Amara's own trace. Her hands. The red thread. A five-year-old on her hip complaining about mangoes. 'Dev, she's heavy, she's your daughter, come and take her—' She turns, laughing, toward camera. Then, from inside her own last ninety seconds: the white light. Amara (33, tall Nigerian woman, close-cropped hair, field-medic kit, a RED THREAD bracelet on her wrist, laughing). Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: real hot afternoon sun; full saturation; the warmest images in the entire film. Effect: period environment; the bloom's arrival at the end. Audio: a real market, at full volume, then absolute silence. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 1 of 3. Begin the described action; end the clip mid-movement, not on a settle. Use the final frame of part 0 as the starting reference so the move is unbroken.)
+```
+
+### S28-28L-b · MEMORY SEQUENCE · 7s · part 2/3
+
+```text
+MEMORY SEQUENCE, handheld, warm, intimate, first-person-adjacent, 35mm, loose handheld — the only warm handheld in Act III. THE FILM GOES SILENT AND WARM: Anjari market 14:11, real, unedited, from Amara's own trace. Her hands. The red thread. A five-year-old on her hip complaining about mangoes. 'Dev, she's heavy, she's your daughter, come and take her—' She turns, laughing, toward camera. Then, from inside her own last ninety seconds: the white light. Amara (33, tall Nigerian woman, close-cropped hair, field-medic kit, a RED THREAD bracelet on her wrist, laughing). Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: real hot afternoon sun; full saturation; the warmest images in the entire film. Effect: period environment; the bloom's arrival at the end. Audio: a real market, at full volume, then absolute silence. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 2 of 3. Continue the described action already in progress; neither begin nor resolve it. Use the final frame of part 1 as the starting reference so the move is unbroken.)
+```
+
+### S28-28L-c · MEMORY SEQUENCE · 7s · part 3/3
+
+```text
+MEMORY SEQUENCE, handheld, warm, intimate, first-person-adjacent, 35mm, loose handheld — the only warm handheld in Act III. THE FILM GOES SILENT AND WARM: Anjari market 14:11, real, unedited, from Amara's own trace. Her hands. The red thread. A five-year-old on her hip complaining about mangoes. 'Dev, she's heavy, she's your daughter, come and take her—' She turns, laughing, toward camera. Then, from inside her own last ninety seconds: the white light. Amara (33, tall Nigerian woman, close-cropped hair, field-medic kit, a RED THREAD bracelet on her wrist, laughing). Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: real hot afternoon sun; full saturation; the warmest images in the entire film. Effect: period environment; the bloom's arrival at the end. Audio: a real market, at full volume, then absolute silence. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 3 of 3. Complete the described action and settle on the final beat. Use the final frame of part 2 as the starting reference so the move is unbroken.)
+```
+
+### S28-28M-a · MS · 5s · part 1/2
+
+```text
+MS, low, 40mm, locked-off, no camera movement. Dev Aranya gets it back. All of it. At once. He makes a sound no human being should make and falls to his knees on the brass ring, both hands over his face — one flesh, one crystal. Dev (58, South Indian man, tall and broad, grey beard, iron-grey hair swept back, LEFT eye brown and RIGHT eye crystalline white-blue, translucent crystal spreading from his left jaw down his neck, long plain charcoal coat, cracked bronze gorget, wedding band on a chain, barefoot). Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: white-blue, and amber leaking out between his fingers. Effect: crystallisation; light through the crystal hand. Audio: the sound; then the 38Hz hum, alone. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 1 of 2. Begin the described action; end the clip mid-movement, not on a settle. Use the final frame of part 0 as the starting reference so the move is unbroken.)
+```
+
+### S28-28M-b · MS · 5s · part 2/2
+
+```text
+MS, low, 40mm, locked-off, no camera movement. Dev Aranya gets it back. All of it. At once. He makes a sound no human being should make and falls to his knees on the brass ring, both hands over his face — one flesh, one crystal. Dev (58, South Indian man, tall and broad, grey beard, iron-grey hair swept back, LEFT eye brown and RIGHT eye crystalline white-blue, translucent crystal spreading from his left jaw down his neck, long plain charcoal coat, cracked bronze gorget, wedding band on a chain, barefoot). Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: white-blue, and amber leaking out between his fingers. Effect: crystallisation; light through the crystal hand. Audio: the sound; then the 38Hz hum, alone. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 2 of 2. Complete the described action and settle on the final beat. Use the final frame of part 1 as the starting reference so the move is unbroken.)
+```
+
+### S28-28N-a · CU · 5s · part 1/2
+
+```text
+CU, eye, low, 85mm, locked-off, no camera movement. 'Oh. Oh, there you are.' Above him, eight million minds hang half-woven. Dev (58, South Indian man, tall and broad, grey beard, iron-grey hair swept back, LEFT eye brown and RIGHT eye crystalline white-blue, translucent crystal spreading from his left jaw down his neck, long plain charcoal coat, cracked bronze gorget, wedding band on a chain, barefoot). Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: white-blue from above through the half-woven field. Effect: the half-woven Concord as a vast, slow, unstable lattice overhead. Audio: eight million faint tones, none of them resolving. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 1 of 2. Begin the described action; end the clip mid-movement, not on a settle. Use the final frame of part 0 as the starting reference so the move is unbroken.)
+```
+
+### S28-28N-b · CU · 4s · part 2/2
+
+```text
+CU, eye, low, 85mm, locked-off, no camera movement. 'Oh. Oh, there you are.' Above him, eight million minds hang half-woven. Dev (58, South Indian man, tall and broad, grey beard, iron-grey hair swept back, LEFT eye brown and RIGHT eye crystalline white-blue, translucent crystal spreading from his left jaw down his neck, long plain charcoal coat, cracked bronze gorget, wedding band on a chain, barefoot). Setting: the Cradle Loom — a 200m crystal geode lined floor to ceiling with standing filament like a giant harp, a brass ring platform at the centre, the walls themselves glowing white-blue. —, —. Light: white-blue from above through the half-woven field. Effect: the half-woven Concord as a vast, slow, unstable lattice overhead. Audio: eight million faint tones, none of them resolving. Photoreal live-action cinema, 2.39:1 anamorphic widescreen, fine 35mm grain, naturalistic skin, practical lighting, no CGI gloss. Avoid: on-screen text, subtitles, watermarks, HUD or UI graphics, comic-book styling, capes, masks on the hero, glossy 3D-render look, extra fingers, changing hairstyles. (Continuous shot, part 2 of 2. Complete the described action and settle on the final beat. Use the final frame of part 1 as the starting reference so the move is unbroken.)
+```
+
+---
+
+Prev: [Scene 27](scene-27.md) · Next: [Scene 29](scene-29.md) · [All sheets](../12-scene-by-scene-prompts.md)
