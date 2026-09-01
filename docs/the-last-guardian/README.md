@@ -13,10 +13,17 @@
 
 ---
 
+## ▶ New here? [**START HERE — Document 00**](00-START-HERE.md)
+
+The step-by-step: what to open, what to paste, in what order, and what to do with the clips that come out. Phase 0 setup → 120-generation animatic → scene-by-scene coverage → QC → edit → sound → export. Hinglish summary at the bottom of that page.
+
+---
+
 ## The package
 
 | # | Document | Contents |
 |---|---|---|
+| 00 | [**START HERE**](00-START-HERE.md) | **The step-by-step production workflow** — setup · animatic · coverage · QC · edit · sound · export |
 | 01 | [Story Bible](01-story-bible.md) | Logline · complete story · three-act structure · thematic rules |
 | 02 | [Character Bible](02-characters.md) | Main characters · relationships · backstories · powers · limitations · villain motivation |
 | 03 | [World, Tech & Locations](03-world-tech-locations.md) | World-building · timeline · technology · 10 locked location sheets · usage matrix |
@@ -44,10 +51,13 @@
 | File | Contents |
 |---|---|
 | `data/shots-01-10.json` · `data/shots-11-20.json` · `data/shots-21-30.json` | The shot list as structured data — the single source of truth |
+| `data/render-tracker.csv` | 440 rows, one per clip: `clip_id … still_used, status, take_file, qc_notes` — your progress sheet, everything starts at `TODO` |
 | `data/veo-prompts.jsonl` | 306 rows: `shot_id`, `scene`, `act`, `location`, `duration_seconds`, `aspect_ratio`, `prompt`, `negative_prompt` — ready to feed a batch generation job |
 | `tools/build-prompts.mjs` | Regenerates docs 06 and 09 plus the JSONL from the shot data |
 | `tools/build-flow-pack.mjs` | Regenerates `prompts-flow/` — 440 clip-sized prompts + `shots.csv` |
 | `tools/build-scene-prompts.mjs` | Regenerates `prompts-scene/` and Document 12 — 30 scene sheets |
+| `tools/build-render-tracker.mjs` | Regenerates `data/render-tracker.csv` — 440-row TODO list for the generation phase |
+| `tools/helmet-cam-degrade.sh` | Deterministic Scene 15 helmet-cam treatment: `tools/helmet-cam-degrade.sh SRC DST` |
 | `tools/lib-prompt.mjs` | Shared character cards, location cards, style and negative lines used by both prompt packs |
 
 ### Reference stills
@@ -109,6 +119,7 @@ cd docs/the-last-guardian
 node tools/build-prompts.mjs        # → 06-shot-list.md, 09-veo-prompts.md, data/veo-prompts.jsonl
 node tools/build-flow-pack.mjs      # → prompts-flow/
 node tools/build-scene-prompts.mjs  # → prompts-scene/, 12-scene-by-scene-prompts.md
+node tools/build-render-tracker.mjs # → data/render-tracker.csv
 ```
 
 Edit the JSON in `data/`, never the generated markdown. The compact character and location cards shared by both prompt packs live in `tools/lib-prompt.mjs`; the full archival identity blocks, film grammar and the global negative prompt live at the top of `tools/build-prompts.mjs` — change them there once and all 306 prompts update consistently.

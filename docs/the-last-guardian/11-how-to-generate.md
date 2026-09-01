@@ -1,6 +1,8 @@
 # THE LAST GUARDIAN — HOW TO GENERATE THE FILM
 ### Document 11 of 12 · Paste-ready prompt pack for Google Flow / Veo and Omni
 
+> **If you have not read [Document 00 — START HERE](00-START-HERE.md) yet, read that first.** It is the ordered workflow; this document is the Flow/Omni detail underneath it.
+
 ---
 
 ## WHAT YOU'VE GOT
