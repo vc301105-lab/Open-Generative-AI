@@ -29,6 +29,9 @@
 | 09 | [Veo-Ready Video Prompts](09-veo-prompts.md) | **One continuity-locked prompt per shot, all 306** *(generated)* |
 | 10 | [Image Prompts & Edit Plan](10-image-prompts-and-edit-plan.md) | Reference-still prompts · location plates · key art · post pipeline · the 10 cuts that matter |
 
+### Shooting boards
+`boards/` holds approved keyframe plates — one per shot — used as first-frame conditioning for video generation. **Scene 1 is complete and locked** (10 of 306 plates); its plates `1D`, `1E` and `1J` are reused directly as Scene 15's `15B`, `15C` and `15D`, which is why it was generated first. See [boards/README.md](boards/README.md).
+
 ### Machine-readable data
 | File | Contents |
 |---|---|
