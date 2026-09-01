@@ -10,19 +10,32 @@
 **Global suffix for every image prompt in this library:**
 > `Photoreal live-action film still, shot on large-format digital with detuned vintage anamorphic glass, fine 35mm grain, naturalistic skin texture, practical motivated lighting, no CGI sheen. NEGATIVE: no text, no watermark, no logos, no on-screen UI, no comic-book styling, no anime, no illustration, no 3D-render look, no plastic skin, no extra fingers, no existing superhero costumes or insignia, no cape over both shoulders, no mask on the hero.`
 
-**Already generated in `reference/`:**
-| File | Contents |
-|---|---|
-| `char-01-arjun-vedh.png` | Arjun, salvage-diver state (A2) |
-| `char-02-kira-okonkwo.png` | Kira, kite-runner state (K1) |
-| `char-03-dev-aranya.png` | Dev / The Hollow, crystallisation stage 3 |
-| `char-04-riya-sen.png` | Riya, Authority command state (R1) |
-| `char-05-sera-vance.png` | Sera Vance / Echo-One |
-| `char-06-meera-sanyal.png` | Dr. Meera Sanyal |
-| `costume-01-arjun-bastion-mantle.png` | Arjun hero costume (A5) |
-| `costume-02-kira-tether-mantle.png` | Kira hero costume (K4) |
-| `key-art-01-the-long-walk.png` | Key art — Scene 6, the bastion bridge |
-| `loc-01-anjari-salt-flats.png` | Location plate — the Salt Flats |
+**Already generated in `reference/` (21 approved assets):**
+
+| File | Contents | Status |
+|---|---|---|
+| `char-01-arjun-vedh.png` | Arjun, salvage-diver state (A2) | approved |
+| `char-02-kira-okonkwo.png` | Kira, kite-runner state (K1) | approved |
+| `char-03-dev-aranya.png` | Dev / The Hollow, crystallisation stage 3 | approved |
+| `char-04-riya-sen.png` | Riya, Authority command state (R1) | approved |
+| `char-05-sera-vance.png` | Sera Vance / Echo-One | approved |
+| `char-06-meera-sanyal.png` | Dr. Meera Sanyal | approved |
+| `char-07-cadet-arjun-2059.png` | Cadet Arjun, 2059 (A1) | approved |
+| `char-08-dev-aranya-2059.png` | Dev Aranya, 2059 (D1) | approved |
+| `char-09-amara-okonkwo.png` | Amara Okonkwo with 5-year-old Kira, 2059 | approved |
+| `char-10-the-hollow.png` | The Hollow, rank and file | **REJECTED — mask geometry** |
+| `costume-01-arjun-bastion-mantle.png` | Arjun hero costume (A5) | approved |
+| `costume-02-kira-tether-mantle.png` | Kira hero costume (K4) | approved |
+| `loc-01-anjari-salt-flats.png` | LOC-05 Salt Flats | approved |
+| `loc-02-the-ark.png` | LOC-08 the Ark | approved |
+| `loc-03-cradle-loom.png` | LOC-09 the Cradle Loom | approved |
+| `loc-04-stiltway-market.png` | LOC-03 the Stiltway | approved |
+| `loc-05-drowned-cathedral.png` | LOC-02 the Drowned Cathedral | approved |
+| `key-art-01-the-long-walk.png` | Key art — Scene 6 | approved |
+| `key-art-02-the-staircase.png` | Key art — Scene 25 | approved |
+| `key-art-03-let-the-corner-argue.png` | Key art — Scene 30 | approved |
+
+> **Open QC item — IMG-10.** The generated Hollow reference renders full-face masks with eye holes. The locked design is a **half-mask covering nose to chin only, leaving the eyes and brows completely bare**. Their visible, calm, ordinary human eyes are the entire design argument — these people are volunteers, not soldiers. Re-render with the mask geometry corrected before this asset is used as conditioning for any of the 34 shots containing the Hollow. Logged in `data/qc-log.csv`.
 
 ---
 
@@ -39,16 +52,16 @@
 ### IMG-05 · SERA VANCE / ECHO-ONE ✅ generated
 ### IMG-06 · MEERA SANYAL ✅ generated
 
-### IMG-07 · CADET ARJUN, 2059 (state A1) — *to generate*
+### IMG-07 · CADET ARJUN, 2059 (state A1) ✅ generated
 > …CADET ARJUN VEDH, 20, the same South Indian face as Arjun but younger and unlined, **completely clean-shaven, NO grey streak anywhere in the hair**, hair shorter and neater, faint thin silver filament scarring only at the neck and forearms, squarer confident posture. A charcoal ribbed lattice-weave cadet undersuit with a high collar and exposed brass conduit ports at the C7 vertebra and both forearms, a brushed brass-bronze half-plate over the chest and LEFT SHOULDER ONLY stamped with a hexagon that has one open side, a utility belt, a single thigh strap, soft boots. Bare-headed. Amber industrial key light, spinning red alarm reflections. Eager, unearned, alive.
 
-### IMG-08 · DEV ARANYA, 2059 — Corps Commander (state D1) — *to generate*
+### IMG-08 · DEV ARANYA, 2059 — Corps Commander (state D1) ✅ generated
 > …DEV ARANYA, 46, South Indian, 188 cm, broad and heavy-shouldered, deep brown skin, darker iron-grey hair shaved at the sides and swept back, a close-cropped grey beard, **BOTH eyes human dark brown, NO crystallisation anywhere on his body**. Full Corps commander regalia: charcoal lattice weave, a full brass-bronze cuirass with an open-sided hexagon in relief, an INTACT bronze commander's gorget, a heavy oxblood cloak, boots, and **a gold wedding band worn ON HIS LEFT HAND**. Calm, paternal, unhurried authority. Amber industrial light.
 
-### IMG-09 · AMARA OKONKWO, 2059 — *to generate*
+### IMG-09 · AMARA OKONKWO, 2059 ✅ generated
 > …AMARA OKONKWO, 33, a tall Nigerian woman, dark brown skin, close-cropped natural hair, warm and mid-laugh, a Corps field medic's canvas kit across her body, a charcoal lattice-weave field uniform with brass conduit ports, and a **RED THREAD BRACELET on her right wrist**. She holds a five-year-old girl with six tiny cornrows on her hip. Hard hot real 2 p.m. tropical sunlight, a whitewashed market wall behind, full saturation, the warmest image in the entire film.
 
-### IMG-10 · THE HOLLOW (rank and file) — *to generate*
+### IMG-10 · THE HOLLOW (rank and file) ⚠️ generated — REJECTED, re-render (mask must be nose-to-chin half-mask, eyes bare)
 > …A group of five figures in bone-white hooded lacquer coats over grey woven underlayers, wearing smooth featureless white half-masks covering only nose to chin so their calm human eyes remain fully visible, soft-soled boots, absolutely no insignia, labels, fasteners, wear or dirt anywhere. They stand still and relaxed, hands at their sides, faintly pleasant expressions. Flat shadowless white light. Unsettling calm, not menace.
 
 ### IMG-11 · COASTAL AUTHORITY RIOT UNIT — *to generate*
@@ -62,16 +75,16 @@
 ## A.2 LOCATION PLATE PROMPTS
 
 ### IMG-20 · ANJARI SALT FLATS (LOC-05) ✅ generated
-### IMG-21 · THE STILTWAY, market level (LOC-03) — *to generate*
+### IMG-21 · THE STILTWAY, market level (LOC-03) ✅ generated
 > Extreme wide, low, from black water level in heavy monsoon rain at dusk. Nine stilt-towers 14–22 storeys tall built from stacked shipping containers, bamboo scaffold and corrugated steel, linked by forty rope-and-plank walkways at every fourth level, tarpaulin awnings in faded saffron, teal and oxblood, LED string lights on every walkway, marigold garlands, plastic-sheet rain capes, oil-drum fires, hand-painted Tamil and Bengali signage. Grey water 11 m below. Alive, crowded, filthy, beloved. Palette: wet slate grey-green with saffron, teal and rust accents.
 
-### IMG-22 · THE DROWNED CATHEDRAL (LOC-02) — *to generate*
+### IMG-22 · THE DROWNED CATHEDRAL (LOC-02) ✅ generated
 > Underwater wide, 18 m depth, 8 m visibility. A submerged barrel-vaulted transit hall with a 40 m ceiling, cast-iron columns, silt-drifted benches, a collapsed departure board frozen at 14:12, and an open-sided hexagon inlaid in the terrazzo floor half-buried in silt. ONE vertical green god-ray falls through a broken skylight. Heavy particulate, caustics, viridian falloff into black. A single small amber diver's lamp far below for scale.
 
-### IMG-23 · THE ARK (LOC-08) — *to generate* ⚠ *not yet generated — image quota*
+### IMG-23 · THE ARK (LOC-08) ✅ generated
 > Extreme wide low angle from a black storm sea. A converted deep-sea drilling rig 240 m across on four legs 80 m above 8 m swell, entirely re-clad in seamless BONE-WHITE lacquer with no rust, streaking, fasteners, labels or wear of any kind — immaculate in a filthy category-five storm. 144 slender white transmission spines lit along the upper deck. Self-lit with perfectly even sourceless shadowless white light; rain does not appear to stick to it. Below, a ragged flotilla of ninety small wooden fishing boats with lamps and six low grey hydrofoil skiffs. Bone-white against near-black, zero warm tones.
 
-### IMG-24 · THE CRADLE LOOM (LOC-09) — *to generate*
+### IMG-24 · THE CRADLE LOOM (LOC-09) ✅ generated
 > Extreme wide, low, looking up. The interior of a 200 m spherical geode entirely lined in standing crystal filament running floor to ceiling like the strings of a stadium-sized harp. A brass-and-crystal ring platform 30 m across suspended at the centre, reached by one narrow catwalk. The walls themselves are the only light source, emissive cool white-blue. No lamps, no fixtures, no machinery. Awe without warmth.
 
 ### IMG-25 · WARD 12 (LOC-04) — *to generate*
@@ -91,10 +104,10 @@
 ## A.3 KEY ART / MARKETING PROMPTS
 
 ### IMG-40 · TEASER ONE-SHEET — "The Long Walk" ✅ generated (`key-art-01-the-long-walk.png`)
-### IMG-41 · CHARACTER ONE-SHEET — "The Staircase" — *to generate*
+### IMG-41 · CHARACTER ONE-SHEET — "The Staircase" ✅ generated (`key-art-02-the-staircase.png`)
 > Extreme wide, low, from black water in a category-five storm. Four hundred ordinary boat people in rain capes climb a staircase made of cyan hexagonal hardlight up the leg of an enormous bone-white offshore rig, 80 m above 8 m swell. The staircase is the only light in an almost black frame. At its base, a small figure in a brass cuirass and teal cloak with both palms pressed to the steel, silver-cyan filament glowing along his forearms. Awe from scale, not from spectacle.
 
-### IMG-42 · FINAL ONE-SHEET — "Let the corner argue" — *to generate*
+### IMG-42 · FINAL ONE-SHEET — "Let the corner argue" ✅ generated (`key-art-03-let-the-corner-argue.png`)
 > A clean blue morning sky, the first in the film. A corrugated rooftop with a red water-tank high above a rebuilt stilt city. A calm barefoot 32-year-old South Indian man in a plain cotton shirt, grey streak at the right temple, holds a carved wooden kite spool, looking up, with an expression that is not memory but the shape of it. A 17-year-old girl with six cornrows and a saffron cloak stands beside him, watching him and not the kite. A single saffron kite high overhead. Warm, quiet, resolved.
 
 ---

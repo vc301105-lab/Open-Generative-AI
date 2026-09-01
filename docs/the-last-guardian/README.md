@@ -39,7 +39,8 @@
 ### Reference stills
 `reference/` contains approved character, costume, location and key-art references. **These are the ground truth for every generated shot** — condition on the image, never re-prompt from text.
 
-| | |
+**Cast**
+| File | Subject |
 |---|---|
 | `char-01-arjun-vedh.png` | Arjun Vedh — salvage diver (state A2) |
 | `char-02-kira-okonkwo.png` | Kira Okonkwo — kite runner (state K1) |
@@ -47,12 +48,36 @@
 | `char-04-riya-sen.png` | Commander Riya Sen — Authority command (R1) |
 | `char-05-sera-vance.png` | Sera Vance / Echo-One |
 | `char-06-meera-sanyal.png` | Dr. Meera Sanyal |
+| `char-07-cadet-arjun-2059.png` | Cadet Arjun, 2059 (state A1) — no grey streak, clean-shaven |
+| `char-08-dev-aranya-2059.png` | Dev Aranya, 2059 (state D1) — no crystallisation, band on hand |
+| `char-09-amara-okonkwo.png` | Amara Okonkwo, 2059 — with 5-year-old Kira, red thread |
+| `char-10-the-hollow.png` | The Hollow, rank and file ⚠ *see QC note* |
+
+**Costume**
+| File | Subject |
+|---|---|
 | `costume-01-arjun-bastion-mantle.png` | Arjun — hero Bastion mantle (A5) |
 | `costume-02-kira-tether-mantle.png` | Kira — hero Tether mantle (K4) |
-| `loc-01-anjari-salt-flats.png` | The Anjari Salt Flats |
-| `key-art-01-the-long-walk.png` | Key art — Scene 6 |
 
-*Still to generate (listed with full prompts in Document 10): Cadet Arjun 2059, Dev 2059, Amara Okonkwo, the Hollow rank-and-file, Authority riot unit, Bhaskar, and location plates for the Stiltway, Drowned Cathedral, the Ark, the Loom, Ward 12, Archive B7, the Tidewall and the Kite-field.*
+**Locations**
+| File | Subject |
+|---|---|
+| `loc-01-anjari-salt-flats.png` | LOC-05 — the Anjari Salt Flats |
+| `loc-02-the-ark.png` | LOC-08 — the Ark |
+| `loc-03-cradle-loom.png` | LOC-09 — the Cradle Loom |
+| `loc-04-stiltway-market.png` | LOC-03 — the Stiltway, market level |
+| `loc-05-drowned-cathedral.png` | LOC-02 — the Drowned Cathedral |
+
+**Key art**
+| File | Subject |
+|---|---|
+| `key-art-01-the-long-walk.png` | Teaser one-sheet — Scene 6, the bastion bridge |
+| `key-art-02-the-staircase.png` | Character one-sheet — Scene 25, the staircase of light |
+| `key-art-03-let-the-corner-argue.png` | Final one-sheet — Scene 30, the kite |
+
+⚠ **Open QC item.** `char-10-the-hollow.png` renders full-face masks with eye holes; the locked design is a **half-mask covering nose to chin only, with the eyes and brows fully bare**. Re-render before it is used as conditioning — the exposed, calm human eyes are the entire point of the design. Logged in `data/qc-log.csv`.
+
+*Still to generate (full prompts in Document 10): Authority riot unit, Bhaskar Rele, and location plates for Ward 12, Archive B7, the Tidewall and the Kite-field.*
 
 ---
 
