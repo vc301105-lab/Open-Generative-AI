@@ -1,27 +1,30 @@
-asset_id,type,scene_ref,generated,status,failed_check,action
-char-01-arjun-vedh,character-ref,all 2071,yes,APPROVED,,lock seed for costume state A2
-char-02-kira-okonkwo,character-ref,3-10,yes,APPROVED,,lock seed for costume state K1
-char-03-dev-aranya,character-ref,17/22/25,yes,APPROVED,,crystallisation stage 3 reference
-char-04-riya-sen,character-ref,4-16,yes,APPROVED,,costume state R1
-char-05-sera-vance,character-ref,9-26,yes,APPROVED,,pre-crack state; crack passes added per Doc 08 A.3
-char-06-meera-sanyal,character-ref,5-20,yes,APPROVED,,pre-Sc.9 state; add bandage for scenes 9+
-char-07-cadet-arjun-2059,character-ref,1/13/15,yes,APPROVED,,verify NO grey streak before every 2059 shot
-char-08-dev-aranya-2059,character-ref,1/15,yes,APPROVED,,verify NO crystallisation and band ON HAND
-char-09-amara-okonkwo,character-ref,16/22/28,yes,APPROVED,,must be identical in all three appearances
-char-10-the-hollow,character-ref,6/8/18/22/25,yes,REJECTED,mask geometry,"full-face mask with eye holes rendered; locked design is a half-mask nose-to-chin with eyes and brows fully bare — re-render before use as conditioning"
-costume-01-arjun-bastion-mantle,costume-ref,23-29,yes,APPROVED,,conduit channels align to Threadwork scars — confirmed
-costume-02-kira-tether-mantle,costume-ref,24-29,yes,APPROVED,,six line-ports; no cuirass; saffron half-cloak
-loc-01-anjari-salt-flats,location-plate,11-13,yes,APPROVED,,no wind / no shadow / zero saturation — confirmed
-loc-02-the-ark,location-plate,22-29,yes,APPROVED,,spotless bone-white in black storm — confirmed
-loc-03-cradle-loom,location-plate,28-29,yes,APPROVED,,emissive walls only; no lamps — confirmed
-loc-04-stiltway-market,location-plate,3/6/7/18/21/30,yes,APPROVED,,base state; Long Walk gap added from Sc.6 onward
-loc-05-drowned-cathedral,location-plate,2/23,yes,APPROVED,,single god-ray; terrazzo hexagon
-key-art-01-the-long-walk,key-art,6,yes,APPROVED,,hexagonal tessellation + real cyan shadow — confirmed
-key-art-02-the-staircase,key-art,25,yes,APPROVED,,crowd on hardlight with correct translucency — confirmed
-key-art-03-let-the-corner-argue,key-art,30,yes,APPROVED,,dead pewter Threadwork; clear sky — confirmed
-loc-ward12,location-plate,5/8/9/20,no,PENDING,,prompt IMG-25 in Doc 10
-loc-archive-b7,location-plate,14-16,no,PENDING,,prompt IMG-26 in Doc 10
-loc-tidewall,location-plate,10,no,PENDING,,prompt IMG-27 in Doc 10
-loc-kite-field,location-plate,3/18/30,no,PENDING,,prompt IMG-28 in Doc 10
-char-authority-riot-unit,character-ref,4/10,no,PENDING,,prompt IMG-11 in Doc 10
-char-bhaskar-rele,character-ref,3/21/23/24/30,no,PENDING,,prompt IMG-12 in Doc 10
+asset_id,type,scene_ref,status,notes
+char-01-arjun-vedh,character-ref,all 2071,APPROVED,costume state A2; lock seed
+char-02-kira-okonkwo,character-ref,3-10,APPROVED,costume state K1; six braids + three clips confirmed
+char-03-dev-aranya,character-ref,17/22/25,APPROVED,crystallisation stage 3
+char-04-riya-sen,character-ref,4-16,APPROVED,costume state R1; bun; insignia present
+char-05-sera-vance,character-ref,9-26,APPROVED,pre-crack state; add crack passes per Doc 08 A.3
+char-06-meera-sanyal,character-ref,5-20,APPROVED,pre-Sc.9 state; add shoulder bandage from Sc.9
+char-07-cadet-arjun-2059,character-ref,1/13/15,APPROVED,NO grey streak / clean-shaven confirmed
+char-08-dev-aranya-2059,character-ref,1/15,APPROVED,NO crystallisation; band ON HAND confirmed
+char-09-amara-okonkwo,character-ref,16/22/28,APPROVED,red thread confirmed; must be identical all three uses
+char-10-the-hollow,character-ref,6/8/18/22/25,APPROVED,"RE-RENDERED v2 — nose-to-chin half-mask with eyes and brows fully bare; five distinct ordinary faces; v1 rejected for full-face masks"
+char-11-authority-riot-unit,character-ref,4/10,APPROVED,deliberately clumsy and over-equipped
+char-12-bhaskar-rele,character-ref,3/21/23/24/30,APPROVED,gold tooth; boat yard
+char-13-dev-stage-4,character-ref,27/28/29,APPROVED,terminal crystallisation with fracture propagation
+costume-01-arjun-bastion-mantle,costume-ref,23-29,APPROVED,conduit channels align to Threadwork scars
+costume-02-kira-tether-mantle,costume-ref,24-29,APPROVED,six line-ports; no cuirass; saffron half-cloak
+costume-03-kira-ark-captive,costume-ref,22/27,APPROVED,"jewellery in dish; braids still six; regulator is the only warm object"
+loc-01-anjari-salt-flats,location-plate,11-13,APPROVED,no wind / no shadow / zero saturation
+loc-02-the-ark,location-plate,22-29,APPROVED,spotless bone-white in black storm
+loc-03-cradle-loom,location-plate,28-29,APPROVED,emissive walls only; no lamps
+loc-04-stiltway-market,location-plate,3/6/7/18/21/30,APPROVED,base state; add Long Walk gap from Sc.6
+loc-05-drowned-cathedral,location-plate,2/23,APPROVED,single god-ray; terrazzo hexagon
+loc-06-ward-12-clinic,location-plate,5/8/9/20,APPROVED,intact state; burnt state required for Sc.20
+loc-07-archive-b7,location-plate,14-16,APPROVED,amber pools; switch to red for Sc.14H
+loc-08-tidewall,location-plate,10,APPROVED,Sluice Gate 31 jammed half-open
+loc-09-kite-field-golden,location-plate,18,APPROVED,the golden break; only warm exterior in Acts I-II
+key-art-01-the-long-walk,key-art,6,APPROVED,hexagonal tessellation + real cyan shadow
+key-art-02-the-staircase,key-art,25,APPROVED,crowd on hardlight with correct translucency
+key-art-03-let-the-corner-argue,key-art,30,APPROVED,dead pewter Threadwork; clear sky
+key-art-04-anjari-1411,key-art,15K/17/22/28,APPROVED,"the Bloom begins at frame edge as gentle white overexposure - no fire, no debris"

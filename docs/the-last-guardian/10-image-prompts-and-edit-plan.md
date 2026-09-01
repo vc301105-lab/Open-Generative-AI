@@ -10,32 +10,41 @@
 **Global suffix for every image prompt in this library:**
 > `Photoreal live-action film still, shot on large-format digital with detuned vintage anamorphic glass, fine 35mm grain, naturalistic skin texture, practical motivated lighting, no CGI sheen. NEGATIVE: no text, no watermark, no logos, no on-screen UI, no comic-book styling, no anime, no illustration, no 3D-render look, no plastic skin, no extra fingers, no existing superhero costumes or insignia, no cape over both shoulders, no mask on the hero.`
 
-**Already generated in `reference/` (21 approved assets):**
+**All 29 reference assets generated and QC-approved** (status per asset in `data/qc-log.csv`):
 
-| File | Contents | Status |
+| # | File | Contents |
 |---|---|---|
-| `char-01-arjun-vedh.png` | Arjun, salvage-diver state (A2) | approved |
-| `char-02-kira-okonkwo.png` | Kira, kite-runner state (K1) | approved |
-| `char-03-dev-aranya.png` | Dev / The Hollow, crystallisation stage 3 | approved |
-| `char-04-riya-sen.png` | Riya, Authority command state (R1) | approved |
-| `char-05-sera-vance.png` | Sera Vance / Echo-One | approved |
-| `char-06-meera-sanyal.png` | Dr. Meera Sanyal | approved |
-| `char-07-cadet-arjun-2059.png` | Cadet Arjun, 2059 (A1) | approved |
-| `char-08-dev-aranya-2059.png` | Dev Aranya, 2059 (D1) | approved |
-| `char-09-amara-okonkwo.png` | Amara Okonkwo with 5-year-old Kira, 2059 | approved |
-| `char-10-the-hollow.png` | The Hollow, rank and file | **REJECTED — mask geometry** |
-| `costume-01-arjun-bastion-mantle.png` | Arjun hero costume (A5) | approved |
-| `costume-02-kira-tether-mantle.png` | Kira hero costume (K4) | approved |
-| `loc-01-anjari-salt-flats.png` | LOC-05 Salt Flats | approved |
-| `loc-02-the-ark.png` | LOC-08 the Ark | approved |
-| `loc-03-cradle-loom.png` | LOC-09 the Cradle Loom | approved |
-| `loc-04-stiltway-market.png` | LOC-03 the Stiltway | approved |
-| `loc-05-drowned-cathedral.png` | LOC-02 the Drowned Cathedral | approved |
-| `key-art-01-the-long-walk.png` | Key art — Scene 6 | approved |
-| `key-art-02-the-staircase.png` | Key art — Scene 25 | approved |
-| `key-art-03-let-the-corner-argue.png` | Key art — Scene 30 | approved |
+| 1 | `char-01-arjun-vedh.png` | Arjun, salvage-diver state (A2) |
+| 2 | `char-02-kira-okonkwo.png` | Kira, kite-runner state (K1) |
+| 3 | `char-03-dev-aranya.png` | Dev / The Hollow, crystallisation stage 3 |
+| 4 | `char-04-riya-sen.png` | Riya, Authority command state (R1) |
+| 5 | `char-05-sera-vance.png` | Sera Vance / Echo-One |
+| 6 | `char-06-meera-sanyal.png` | Dr. Meera Sanyal |
+| 7 | `char-07-cadet-arjun-2059.png` | Cadet Arjun, 2059 (A1) |
+| 8 | `char-08-dev-aranya-2059.png` | Dev Aranya, 2059 (D1) |
+| 9 | `char-09-amara-okonkwo.png` | Amara Okonkwo with 5-year-old Kira, 2059 |
+| 10 | `char-10-the-hollow.png` | The Hollow, rank and file — **v2, re-rendered** |
+| 11 | `char-11-authority-riot-unit.png` | Coastal Authority riot unit |
+| 12 | `char-12-bhaskar-rele.png` | Bhaskar "Bash" Rele |
+| 13 | `char-13-dev-stage-4.png` | Dev — terminal crystallisation, stage 4 |
+| 14 | `costume-01-arjun-bastion-mantle.png` | Arjun hero costume (A5) |
+| 15 | `costume-02-kira-tether-mantle.png` | Kira hero costume (K4) |
+| 16 | `costume-03-kira-ark-captive.png` | Kira, Ark captive (K3) |
+| 17 | `loc-01-anjari-salt-flats.png` | LOC-05 Salt Flats |
+| 18 | `loc-02-the-ark.png` | LOC-08 the Ark |
+| 19 | `loc-03-cradle-loom.png` | LOC-09 the Cradle Loom |
+| 20 | `loc-04-stiltway-market.png` | LOC-03 the Stiltway |
+| 21 | `loc-05-drowned-cathedral.png` | LOC-02 the Drowned Cathedral |
+| 22 | `loc-06-ward-12-clinic.png` | LOC-04 Ward 12 |
+| 23 | `loc-07-archive-b7.png` | LOC-06 Archive Level B7 |
+| 24 | `loc-08-tidewall.png` | LOC-07 the Tidewall |
+| 25 | `loc-09-kite-field-golden.png` | LOC-10 the Kite-field, golden break |
+| 26 | `key-art-01-the-long-walk.png` | Key art — Scene 6 |
+| 27 | `key-art-02-the-staircase.png` | Key art — Scene 25 |
+| 28 | `key-art-03-let-the-corner-argue.png` | Key art — Scene 30 |
+| 29 | `key-art-04-anjari-1411.png` | Anjari market 14:11, 2059 — the Bloom begins |
 
-> **Open QC item — IMG-10.** The generated Hollow reference renders full-face masks with eye holes. The locked design is a **half-mask covering nose to chin only, leaving the eyes and brows completely bare**. Their visible, calm, ordinary human eyes are the entire design argument — these people are volunteers, not soldiers. Re-render with the mask geometry corrected before this asset is used as conditioning for any of the 34 shots containing the Hollow. Logged in `data/qc-log.csv`.
+> **QC history — IMG-10.** The first Hollow render produced full-face masks with eye holes and was **rejected**. The locked design is a smooth half-mask covering the nose to the chin only, leaving the eyes, brows and forehead completely bare. Their visible, calm, ordinary human eyes are the entire design argument — these are volunteers, not soldiers, and a faceless mask turns them into generic antagonists. Re-rendered as v2 and approved.
 
 ---
 
@@ -61,14 +70,24 @@
 ### IMG-09 · AMARA OKONKWO, 2059 ✅ generated
 > …AMARA OKONKWO, 33, a tall Nigerian woman, dark brown skin, close-cropped natural hair, warm and mid-laugh, a Corps field medic's canvas kit across her body, a charcoal lattice-weave field uniform with brass conduit ports, and a **RED THREAD BRACELET on her right wrist**. She holds a five-year-old girl with six tiny cornrows on her hip. Hard hot real 2 p.m. tropical sunlight, a whitewashed market wall behind, full saturation, the warmest image in the entire film.
 
-### IMG-10 · THE HOLLOW (rank and file) ⚠️ generated — REJECTED, re-render (mask must be nose-to-chin half-mask, eyes bare)
+### IMG-10 · THE HOLLOW (rank and file) ✅ generated (v2 — v1 rejected for full-face masks)
 > …A group of five figures in bone-white hooded lacquer coats over grey woven underlayers, wearing smooth featureless white half-masks covering only nose to chin so their calm human eyes remain fully visible, soft-soled boots, absolutely no insignia, labels, fasteners, wear or dirt anywhere. They stand still and relaxed, hands at their sides, faintly pleasant expressions. Flat shadowless white light. Unsettling calm, not menace.
 
-### IMG-11 · COASTAL AUTHORITY RIOT UNIT — *to generate*
+### IMG-11 · COASTAL AUTHORITY RIOT UNIT ✅ generated
 > …Three officers in storm-grey riot weave with an oxblood chevron on the left shoulder, full-face storm visors misted from the inside, over-equipped webbing, holding blunt matte-grey spike launchers. They look heavy, clumsy and cold in driving rain, one of them slipping on wet decking. Institutional, unheroic, human.
 
-### IMG-12 · BHASKAR RELE — *to generate*
+### IMG-12 · BHASKAR RELE ✅ generated
 > …BHASKAR "BASH" RELE, 44, South Indian, bald with a thick grey moustache and a gold tooth, tattooed forearms, an oil-stained work vest over a lungi, welding goggles pushed up on his head, standing in a boat yard in the rain with a grinder in one hand. Warm, gruff, immovable.
+
+
+### IMG-13 · DEV ARANYA — terminal crystallisation, stage 4 ✅ generated
+> …DEV ARANYA, 58, lit only by emissive cool white-blue crystal walls. Crystallisation STAGE 4, terminal: translucent crystalline tissue now covers his left jaw, whole neck, left shoulder, left chest and his **entire left hand and forearm**, with fine fractures visibly propagating through the crystal like cracks in ice and light leaking from them. Charcoal coat, cracked gorget, wedding band on a chain, bare feet. Grief-stricken, exhausted, gentle, dying. **Not a monster — a devastated man.**
+
+### IMG-14 · KIRA — Ark captive (state K3) ✅ generated
+> …KIRA in a vast bone-white shadowless room. Still **exactly six cornrows** but the high knot is released and **all copper clips and the brass earring have been removed**. Palms in clean white bandages. A plain bone-white shift and soft white trousers, bare feet. Clipped at her waist, jarringly, the battered brass diver's regulator — the only dirty, warm-toned object in frame. A small white dish on the floor holds three copper clips and one brass earring. Furious, frightened, seventeen.
+
+### IMG-43 · ANJARI MARKET, 14:11, 3 AUGUST 2059 ✅ generated (`key-art-04-anjari-1411.png`)
+> Hard hot 2 p.m. tropical sunlight, full saturation — the warmest image in the film. A busy coastal market square in 2059: whitewashed walls, a school wall painted with fish, mango sellers, bicycles, laundry, marigolds, gulls, blue sea at the end of the street. In the middle distance a tall Nigerian woman in a field-medic uniform with a red thread bracelet laughs and shifts a five-year-old on her hip. At the very edge of frame, a faint soundless white glow has begun — **not fire, not an explosion**, a gentle glassy overexposure spreading up the street. Nobody has noticed it. **No fire, no smoke, no debris, no mushroom cloud.**
 
 ---
 
@@ -87,16 +106,16 @@
 ### IMG-24 · THE CRADLE LOOM (LOC-09) ✅ generated
 > Extreme wide, low, looking up. The interior of a 200 m spherical geode entirely lined in standing crystal filament running floor to ceiling like the strings of a stadium-sized harp. A brass-and-crystal ring platform 30 m across suspended at the centre, reached by one narrow catwalk. The walls themselves are the only light source, emissive cool white-blue. No lamps, no fixtures, no machinery. Awe without warmth.
 
-### IMG-25 · WARD 12 (LOC-04) — *to generate*
+### IMG-25 · WARD 12 (LOC-04) ✅ generated
 > Interior wide. Three shipping containers welded into an L. A repurposed dental chair as a surgical seat, pegboard walls hung with brass instruments, a floor-to-ceiling wall of ten thousand handwritten index cards, a fishless aquarium used as a coolant tank glowing green, a curtain of hanging x-ray film, a workbench of copper components. Two hard 5600 K surgical lamps, one warm desk lamp, green aquarium glow. Rain hammering an unseen steel roof.
 
-### IMG-26 · BASTION SPIRE ARCHIVE B7 (LOC-06) — *to generate*
+### IMG-26 · BASTION SPIRE ARCHIVE B7 (LOC-06) ✅ generated
 > Deep one-point perspective down a cold-room corridor of grey evidence drums on frosted racks. Amber emergency lighting in hard pools every eight metres with black between them. Frost on the steel, visible breath. One drum in the middle distance stencilled with a serial number. Institutional, sepulchral.
 
-### IMG-27 · THE TIDEWALL, SLUICE GATE 31 (LOC-07) — *to generate*
+### IMG-27 · THE TIDEWALL, SLUICE GATE 31 (LOC-07) ✅ generated
 > Aerial lateral, pre-dawn, driving rain. A 40 m concrete sea-wall with rusted steel teeth running to the horizon, sluice gates every 400 m, a barnacle line at 12 m, sweeping sodium searchlights, heavy swell breaking against it. One gate jammed half-open with a small overloaded fishing boat running the channel toward it. A rusted sign reads nothing legible.
 
-### IMG-28 · THE KITE-FIELD, golden break (LOC-10) — *to generate*
+### IMG-28 · THE KITE-FIELD, golden break (LOC-10) ✅ generated
 > A 30×20 m corrugated steel roof deck high above a stilt city, with a red water-tank, a forest of antenna masts, drying laundry lines, pigeon coops and a painted hopscotch grid. The rain has just stopped: eleven minutes of low golden light through rain-haze, sixty kites up over forty rooftops, laundry snapping, pigeons bursting off the coops. The only warm exterior light in the film's first two acts.
 
 ---

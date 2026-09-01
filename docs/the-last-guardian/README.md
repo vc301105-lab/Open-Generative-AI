@@ -51,13 +51,17 @@
 | `char-07-cadet-arjun-2059.png` | Cadet Arjun, 2059 (state A1) — no grey streak, clean-shaven |
 | `char-08-dev-aranya-2059.png` | Dev Aranya, 2059 (state D1) — no crystallisation, band on hand |
 | `char-09-amara-okonkwo.png` | Amara Okonkwo, 2059 — with 5-year-old Kira, red thread |
-| `char-10-the-hollow.png` | The Hollow, rank and file ⚠ *see QC note* |
+| `char-10-the-hollow.png` | The Hollow, rank and file — nose-to-chin half-masks, eyes bare |
+| `char-11-authority-riot-unit.png` | Coastal Authority riot unit |
+| `char-12-bhaskar-rele.png` | Bhaskar "Bash" Rele |
+| `char-13-dev-stage-4.png` | Dev Aranya — terminal crystallisation, stage 4 |
 
 **Costume**
 | File | Subject |
 |---|---|
 | `costume-01-arjun-bastion-mantle.png` | Arjun — hero Bastion mantle (A5) |
 | `costume-02-kira-tether-mantle.png` | Kira — hero Tether mantle (K4) |
+| `costume-03-kira-ark-captive.png` | Kira — Ark captive (K3), jewellery removed |
 
 **Locations**
 | File | Subject |
@@ -67,6 +71,10 @@
 | `loc-03-cradle-loom.png` | LOC-09 — the Cradle Loom |
 | `loc-04-stiltway-market.png` | LOC-03 — the Stiltway, market level |
 | `loc-05-drowned-cathedral.png` | LOC-02 — the Drowned Cathedral |
+| `loc-06-ward-12-clinic.png` | LOC-04 — Ward 12, Meera's clinic |
+| `loc-07-archive-b7.png` | LOC-06 — Bastion Spire, Archive Level B7 |
+| `loc-08-tidewall.png` | LOC-07 — the Tidewall, Sluice Gate 31 |
+| `loc-09-kite-field-golden.png` | LOC-10 — the Kite-field, golden break |
 
 **Key art**
 | File | Subject |
@@ -74,10 +82,9 @@
 | `key-art-01-the-long-walk.png` | Teaser one-sheet — Scene 6, the bastion bridge |
 | `key-art-02-the-staircase.png` | Character one-sheet — Scene 25, the staircase of light |
 | `key-art-03-let-the-corner-argue.png` | Final one-sheet — Scene 30, the kite |
+| `key-art-04-anjari-1411.png` | Anjari market, 14:11, 3 Aug 2059 — the Bloom begins |
 
-⚠ **Open QC item.** `char-10-the-hollow.png` renders full-face masks with eye holes; the locked design is a **half-mask covering nose to chin only, with the eyes and brows fully bare**. Re-render before it is used as conditioning — the exposed, calm human eyes are the entire point of the design. Logged in `data/qc-log.csv`.
-
-*Still to generate (full prompts in Document 10): Authority riot unit, Bhaskar Rele, and location plates for Ward 12, Archive B7, the Tidewall and the Kite-field.*
+**All 29 reference assets are generated and QC-approved.** Status for every asset is tracked in `data/qc-log.csv`. One asset (`char-10-the-hollow.png`) was rejected on first pass for full-face mask geometry and re-rendered — the locked design is a nose-to-chin half-mask leaving the eyes and brows completely bare, because the Hollow's visible, calm, ordinary human eyes are the entire design argument.
 
 ---
 
