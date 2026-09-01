@@ -28,6 +28,10 @@
 | 08 | [Continuity Bible](08-continuity-bible.md) | Character continuity · location continuity · wound clocks · prop clocks · QC checklist |
 | 09 | [Veo-Ready Video Prompts](09-veo-prompts.md) | **One continuity-locked prompt per shot, all 306** *(generated)* |
 | 10 | [Image Prompts & Edit Plan](10-image-prompts-and-edit-plan.md) | Reference-still prompts · location plates · key art · post pipeline · the 10 cuts that matter |
+| 11 | [**How to Generate the Film**](11-how-to-generate.md) | **Start here to actually make it** — Google Flow / Veo and Omni walkthrough, ingredient mapping, QC, the five things that will go wrong |
+
+### ▶ Paste-ready prompt pack — `prompts-flow/`
+**440 clips, each sized for one 8-second generation.** Open `prompts-flow/scene-01.txt`, copy a block, paste it into Google Flow. Shots longer than 8 seconds are pre-split into evenly sized parts with beat instructions (begin / continue / resolve) so the movement stays unbroken. `prompts-flow/shots.csv` is the same data as a spreadsheet for batch or API work. Full walkthrough in [Document 11](11-how-to-generate.md).
 
 ### Shooting boards
 `boards/` holds approved keyframe plates — one per shot — used as first-frame conditioning for video generation. **Scene 1 is complete and locked** (10 of 306 plates); its plates `1D`, `1E` and `1J` are reused directly as Scene 15's `15B`, `15C` and `15D`, which is why it was generated first. See [boards/README.md](boards/README.md).
