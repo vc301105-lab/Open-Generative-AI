@@ -1,0 +1,963 @@
+{
+  "name": "TLG 01 — Render Pipeline (Still → Veo Clip → Drive → Sheet)",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## 1) Trigger + Config\nRoz 09:00 IST pe automatically chalta hai (manual bhi chala sakte ho: **Execute Workflow**).\n\n**Sabse zaroori:** `Config` node me Sheet ID, Drive folder IDs, model names aur Telegram chat ID paste karo. Baaki sab nodes Config se hi values lete hain.",
+        "height": 240,
+        "width": 460
+      },
+      "id": "f0a1b2c3-0001-4d01-9a01-000000000001",
+      "name": "Sticky — Trigger + Config",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [-720, 60]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 9 * * *"
+            }
+          ]
+        }
+      },
+      "id": "f0a1b2c3-0002-4d02-9a02-000000000002",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [-640, 360]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "cfg-sheet-doc",
+              "name": "sheetDocId",
+              "value": "PASTE_GOOGLE_SHEET_ID_HERE",
+              "type": "string"
+            },
+            {
+              "id": "cfg-sheet-tab",
+              "name": "sheetTab",
+              "value": "Render Tracker",
+              "type": "string"
+            },
+            {
+              "id": "cfg-stills-folder",
+              "name": "stillsFolderId",
+              "value": "PASTE_DRIVE_FOLDER_ID_01_STILLS",
+              "type": "string"
+            },
+            {
+              "id": "cfg-clips-folder",
+              "name": "clipsFolderId",
+              "value": "PASTE_DRIVE_FOLDER_ID_02_CLIPS",
+              "type": "string"
+            },
+            {
+              "id": "cfg-gemini-model",
+              "name": "geminiImageModel",
+              "value": "gemini-2.5-flash-image",
+              "type": "string"
+            },
+            {
+              "id": "cfg-veo-model",
+              "name": "veoModel",
+              "value": "veo-3.0-generate-preview",
+              "type": "string"
+            },
+            {
+              "id": "cfg-max-shots",
+              "name": "maxShotsPerRun",
+              "value": 25,
+              "type": "number"
+            },
+            {
+              "id": "cfg-telegram-chat",
+              "name": "telegramChatId",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "cfg-style",
+              "name": "styleSuffix",
+              "value": "Style: cinematic 2.39:1 anamorphic film frame, shallow depth of field, subtle film grain, practical lighting, hyper-detailed textures, epic sci-fi superhero thriller tone.",
+              "type": "string"
+            },
+            {
+              "id": "cfg-negative",
+              "name": "negativeSuffix",
+              "value": "no text, no subtitles, no watermark, no logo, no HUD, no split screen, no deformed hands, no extra fingers",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f0a1b2c3-0003-4d03-9a03-000000000003",
+      "name": "Config",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [-420, 360]
+    },
+    {
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('Config').first().json.sheetDocId }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $('Config').first().json.sheetTab }}"
+        },
+        "options": {}
+      },
+      "id": "f0a1b2c3-0004-4d04-9a04-000000000004",
+      "name": "Read Tracker Rows",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [-200, 360]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "flt-todo",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "TODO",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "f0a1b2c3-0005-4d05-9a05-000000000005",
+      "name": "Only TODO Shots",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [20, 360]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Quota guard: ek run me max N shots hi render karo (Config > maxShotsPerRun)\nconst cfg = $('Config').first().json;\nconst limit = Number(cfg.maxShotsPerRun) || 25;\nreturn $input.all().slice(0, limit);"
+      },
+      "id": "f0a1b2c3-0006-4d06-9a06-000000000006",
+      "name": "Limit Per Run",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [240, 360]
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "f0a1b2c3-0007-4d07-9a07-000000000007",
+      "name": "Loop Shots",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [460, 360]
+    },
+    {
+      "parameters": {
+        "content": "## 2) Still frame — Gemini\nHar shot ka pehle **still** banta hai (Gemini image model).\n\nAgar still fail ho gaya toh row `FAILED` mark hoti hai aur pipeline agle shot pe chala jata hai — run rukta nahi.",
+        "height": 200,
+        "width": 560
+      },
+      "id": "f0a1b2c3-0008-4d08-9a08-000000000008",
+      "name": "Sticky — Still (Gemini)",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [680, 100]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Sheet row → final image prompt + video prompt\nconst cfg = $('Config').first().json;\nconst out = [];\nfor (const item of $input.all()) {\n  const row = item.json;\n  const videoBase = String(row.video_prompt || row.prompt || '').trim();\n  const stillBase = String(row.prompt || row.video_prompt || '').trim();\n  if (!videoBase) {\n    throw new Error(`Row ${row.clip_id}: prompt / video_prompt column khali hai — sheet me prompt paste karo`);\n  }\n  const imagePrompt = [\n    stillBase,\n    '',\n    cfg.styleSuffix,\n    `Avoid: ${cfg.negativeSuffix}.`,\n  ].join('\\n');\n  const videoPrompt = [\n    videoBase,\n    '',\n    cfg.styleSuffix,\n    `Avoid: ${cfg.negativeSuffix}.`,\n  ].join('\\n');\n  out.push({\n    json: {\n      clipId: String(row.clip_id),\n      scene: row.scene,\n      shot: row.shot,\n      seconds: row.seconds,\n      location: row.location,\n      imagePrompt,\n      videoPrompt,\n    },\n  });\n}\nreturn out;"
+      },
+      "id": "f0a1b2c3-0009-4d09-9a09-000000000009",
+      "name": "Build Prompts",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [700, 360]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://generativelanguage.googleapis.com/v1beta/models/{{ $('Config').first().json.geminiImageModel }}:generateContent",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ contents: [{ parts: [{ text: $('Build Prompts').last().json.imagePrompt }] }], generationConfig: { responseModalities: ['IMAGE'] } }) }}",
+        "options": {}
+      },
+      "id": "f0a1b2c3-0010-4d10-9a10-000000000010",
+      "name": "Generate Still (Gemini)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [920, 360],
+      "onError": "continueRegularOutput",
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "jsCode": "// Gemini response → still image (binary) ya failReason\nconst out = [];\nfor (const item of $input.all()) {\n  const row = $('Build Prompts').last().json;\n  const resp = item.json || {};\n  const apiError = resp?.error?.message || resp?.errorMessage;\n  const parts = resp?.candidates?.[0]?.content?.parts || [];\n  const img = parts.find(p => (p.inlineData && p.inlineData.data) || (p.inline_data && p.inline_data.data));\n  if (!img) {\n    out.push({\n      json: {\n        ok: false,\n        clipId: row.clipId,\n        failReason: 'Gemini still failed: ' + String(apiError || JSON.stringify(resp).slice(0, 300)),\n      },\n    });\n    continue;\n  }\n  const b64 = (img.inlineData && img.inlineData.data) || (img.inline_data && img.inline_data.data);\n  const mime = (img.inlineData && img.inlineData.mimeType) || (img.inline_data && img.inline_data.mime_type) || 'image/png';\n  const fileName = `${row.clipId}_still.png`;\n  const binary = await this.helpers.prepareBinaryData(Buffer.from(b64, 'base64'), fileName, mime);\n  out.push({\n    json: { ok: true, clipId: row.clipId, b64, fileName, mime },\n    binary: { data: binary },\n  });\n}\nreturn out;"
+      },
+      "id": "f0a1b2c3-0011-4d11-9a11-000000000011",
+      "name": "Parse Still",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1140, 360]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "if-still-ok",
+              "leftValue": "={{ $json.ok }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "f0a1b2c3-0012-4d12-9a12-000000000012",
+      "name": "Still OK?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [1360, 360]
+    },
+    {
+      "parameters": {
+        "content": "## 3) Video — Veo\nStill ko **first frame** banakar Veo job submit hoti hai → har 30s poll → video download.\n\nVeo ke liye Gemini API key pe **billing enable** hona chahiye.",
+        "height": 200,
+        "width": 620
+      },
+      "id": "f0a1b2c3-0013-4d13-9a13-000000000013",
+      "name": "Sticky — Video (Veo)",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [1620, -160]
+    },
+    {
+      "parameters": {
+        "name": "={{ $('Parse Still').last().json.fileName }}",
+        "folderId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('Config').first().json.stillsFolderId }}"
+        },
+        "inputFieldName": "data",
+        "options": {}
+      },
+      "id": "f0a1b2c3-0014-4d14-9a14-000000000014",
+      "name": "Upload Still",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [1640, 240]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://generativelanguage.googleapis.com/v1beta/models/{{ $('Config').first().json.veoModel }}:predictLongRunning",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ instances: [{ prompt: $('Build Prompts').last().json.videoPrompt, image: { bytesBase64Encoded: $('Parse Still').last().json.b64 } }], parameters: { aspectRatio: '16:9', numberOfVideos: 1, personGeneration: 'allow_adult', negativePrompt: $('Config').first().json.negativeSuffix } }) }}",
+        "options": {}
+      },
+      "id": "f0a1b2c3-0015-4d15-9a15-000000000015",
+      "name": "Submit Veo Job",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1860, 240],
+      "onError": "continueRegularOutput",
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 10000
+    },
+    {
+      "parameters": {
+        "jsCode": "// Veo submit response → operation name ya failReason\nconst out = [];\nfor (const item of $input.all()) {\n  const j = item.json || {};\n  if (j.name) {\n    out.push({ json: { ok: true, opName: j.name } });\n  } else {\n    out.push({\n      json: {\n        ok: false,\n        clipId: $('Build Prompts').last().json.clipId,\n        failReason: 'Veo submit failed: ' + String(j?.error?.message || JSON.stringify(j).slice(0, 300)),\n      },\n    });\n  }\n}\nreturn out;"
+      },
+      "id": "f0a1b2c3-0016-4d16-9a16-000000000016",
+      "name": "Check Veo Submit",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2080, 240]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "if-veo-submitted",
+              "leftValue": "={{ $json.opName }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "f0a1b2c3-0017-4d17-9a17-000000000017",
+      "name": "Veo Submitted?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [2300, 240]
+    },
+    {
+      "parameters": {
+        "resume": "timeInterval",
+        "amount": 30,
+        "unit": "seconds"
+      },
+      "id": "f0a1b2c3-0018-4d18-9a18-000000000018",
+      "name": "Wait 30s",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [2520, 120],
+      "webhookId": "f0a1b2c3-aaaa-4d18-9a18-000000000018"
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "=https://generativelanguage.googleapis.com/v1beta/{{ $('Check Veo Submit').last().json.opName }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "f0a1b2c3-0019-4d19-9a19-000000000019",
+      "name": "Poll Veo Job",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [2740, 120],
+      "onError": "continueRegularOutput",
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "if-veo-done",
+              "leftValue": "={{ $json.done }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "f0a1b2c3-0020-4d20-9a20-000000000020",
+      "name": "Veo Done?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [2960, 120]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Veo operation result → video URI ya failReason\nconst out = [];\nfor (const item of $input.all()) {\n  const j = item.json || {};\n  const clipId = $('Build Prompts').last().json.clipId;\n  if (j.error) {\n    out.push({ json: { ok: false, clipId, failReason: 'Veo error: ' + String(j.error.message || JSON.stringify(j.error).slice(0, 300)) } });\n    continue;\n  }\n  const samples = j?.response?.generateVideoResponse?.generatedSamples || [];\n  const uri = samples[0]?.video?.uri;\n  if (uri) {\n    out.push({ json: { ok: true, clipId, videoUri: uri } });\n    continue;\n  }\n  out.push({ json: { ok: false, clipId, failReason: 'Veo returned no video: ' + JSON.stringify(j).slice(0, 300) } });\n}\nreturn out;"
+      },
+      "id": "f0a1b2c3-0021-4d21-9a21-000000000021",
+      "name": "Check Veo Result",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [3200, 0]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "if-veo-ok",
+              "leftValue": "={{ $json.ok }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "f0a1b2c3-0022-4d22-9a22-000000000022",
+      "name": "Veo OK?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [3420, 0]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $json.videoUri }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file",
+              "outputPropertyName": "video"
+            }
+          }
+        }
+      },
+      "id": "f0a1b2c3-0023-4d23-9a23-000000000023",
+      "name": "Download Video",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [3660, -120],
+      "onError": "continueRegularOutput",
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "name": "={{ $('Build Prompts').last().json.clipId }}_v1.mp4",
+        "folderId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('Config').first().json.clipsFolderId }}"
+        },
+        "inputFieldName": "video",
+        "options": {}
+      },
+      "id": "f0a1b2c3-0024-4d24-9a24-000000000024",
+      "name": "Upload Clip",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [3880, -120]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('Config').first().json.sheetDocId }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $('Config').first().json.sheetTab }}"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "status": "DONE",
+            "still_file": "={{ $('Upload Still').last().json.webViewLink }}",
+            "clip_file": "={{ $json.webViewLink }}",
+            "finished_at": "={{ $now.toISO() }}",
+            "qc_notes": "auto-render v1 — needs QC"
+          }
+        },
+        "lookupColumn": "clip_id",
+        "lookupValue": "={{ $('Build Prompts').last().json.clipId }}",
+        "options": {}
+      },
+      "id": "f0a1b2c3-0025-4d25-9a25-000000000025",
+      "name": "Mark DONE",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [4100, -120],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('Config').first().json.sheetDocId }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $('Config').first().json.sheetTab }}"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "status": "FAILED",
+            "qc_notes": "={{ $json.failReason }}",
+            "finished_at": "={{ $now.toISO() }}"
+          }
+        },
+        "lookupColumn": "clip_id",
+        "lookupValue": "={{ $json.clipId }}",
+        "options": {}
+      },
+      "id": "f0a1b2c3-0026-4d26-9a26-000000000026",
+      "name": "Mark FAILED",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [2740, 620],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "content": "## 4) Save + Status\nDrive me still + clip upload → Sheet me `DONE` / `FAILED` update → loop agla shot uthata hai.\n\nEnd me optional Telegram summary (Config me `telegramChatId` bharo + Telegram credential lagao).",
+        "height": 220,
+        "width": 560
+      },
+      "id": "f0a1b2c3-0027-4d27-9a27-000000000027",
+      "name": "Sticky — Save + Summary",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [3860, -420]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Run summary — kitne DONE, kitne FAILED\nfunction count(name) {\n  try { return $(name).all().length; } catch (e) { return 0; }\n}\nreturn [{\n  json: {\n    done: count('Mark DONE'),\n    failed: count('Mark FAILED'),\n    at: $now.toISO(),\n  },\n}];"
+      },
+      "id": "f0a1b2c3-0028-4d28-9a28-000000000028",
+      "name": "Run Summary",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [4340, -120]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "if-tg-configured",
+              "leftValue": "={{ $('Config').first().json.telegramChatId }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "f0a1b2c3-0029-4d29-9a29-000000000029",
+      "name": "Telegram Configured?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [4560, -120]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Config').first().json.telegramChatId }}",
+        "text": "=🎬 TLG render run complete\n✅ DONE: {{ $json.done }}  |  ❌ FAILED: {{ $json.failed }}\nSheet: https://docs.google.com/spreadsheets/d/{{ $('Config').first().json.sheetDocId }}/edit",
+        "additionalFields": {}
+      },
+      "id": "f0a1b2c3-0030-4d30-9a30-000000000030",
+      "name": "Notify Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [4800, -220]
+    },
+    {
+      "parameters": {},
+      "id": "f0a1b2c3-0031-4d31-9a31-000000000031",
+      "name": "Done",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [4800, -20]
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Config",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Config": {
+      "main": [
+        [
+          {
+            "node": "Read Tracker Rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Tracker Rows": {
+      "main": [
+        [
+          {
+            "node": "Only TODO Shots",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Only TODO Shots": {
+      "main": [
+        [
+          {
+            "node": "Limit Per Run",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit Per Run": {
+      "main": [
+        [
+          {
+            "node": "Loop Shots",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Shots": {
+      "main": [
+        [
+          {
+            "node": "Run Summary",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Build Prompts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Prompts": {
+      "main": [
+        [
+          {
+            "node": "Generate Still (Gemini)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Still (Gemini)": {
+      "main": [
+        [
+          {
+            "node": "Parse Still",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Still": {
+      "main": [
+        [
+          {
+            "node": "Still OK?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Still OK?": {
+      "main": [
+        [
+          {
+            "node": "Upload Still",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Mark FAILED",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload Still": {
+      "main": [
+        [
+          {
+            "node": "Submit Veo Job",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Submit Veo Job": {
+      "main": [
+        [
+          {
+            "node": "Check Veo Submit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Veo Submit": {
+      "main": [
+        [
+          {
+            "node": "Veo Submitted?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Veo Submitted?": {
+      "main": [
+        [
+          {
+            "node": "Wait 30s",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Mark FAILED",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 30s": {
+      "main": [
+        [
+          {
+            "node": "Poll Veo Job",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Poll Veo Job": {
+      "main": [
+        [
+          {
+            "node": "Veo Done?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Veo Done?": {
+      "main": [
+        [
+          {
+            "node": "Check Veo Result",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait 30s",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Veo Result": {
+      "main": [
+        [
+          {
+            "node": "Veo OK?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Veo OK?": {
+      "main": [
+        [
+          {
+            "node": "Download Video",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Mark FAILED",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download Video": {
+      "main": [
+        [
+          {
+            "node": "Upload Clip",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload Clip": {
+      "main": [
+        [
+          {
+            "node": "Mark DONE",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark DONE": {
+      "main": [
+        [
+          {
+            "node": "Loop Shots",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark FAILED": {
+      "main": [
+        [
+          {
+            "node": "Loop Shots",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run Summary": {
+      "main": [
+        [
+          {
+            "node": "Telegram Configured?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram Configured?": {
+      "main": [
+        [
+          {
+            "node": "Notify Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Done",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Asia/Kolkata",
+    "executionTimeout": 10800
+  },
+  "pinData": {}
+}

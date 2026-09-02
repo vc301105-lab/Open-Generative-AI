@@ -37,9 +37,13 @@ The step-by-step: what to open, what to paste, in what order, and what to do wit
 | 10 | [Image Prompts & Edit Plan](10-image-prompts-and-edit-plan.md) | Reference-still prompts · location plates · key art · post pipeline · the 10 cuts that matter |
 | 11 | [**How to Generate the Film**](11-how-to-generate.md) | **Start here to actually make it** — Google Flow / Veo and Omni walkthrough, ingredient mapping, QC, the five things that will go wrong |
 | 12 | [**Scene-by-Scene Prompt Sheets**](12-scene-by-scene-prompts.md) | **One sheet per scene, 30 sheets** — establishing still, hero still, whole-scene-in-one-clip, hero clip, full coverage *(generated)* |
+| 13 | [**n8n Automation**](n8n/README.md) | **Complete n8n automation package** — 3 import-ready workflows (render pipeline · error alerts · QC webhook), Google Sheet template, full Hinglish setup guide |
 
 ### ▶ Scene-by-scene sheets — `prompts-scene/`
 **The easiest way in.** One markdown sheet per scene (`prompts-scene/scene-01.md` … `scene-30.md`). Each sheet is self-contained and ordered the way you actually work: ① the establishing still prompt, ② the hero still prompt, ③ the whole scene as a single 8-second clip, ④ the hero shot at full quality, ⑤ every shot in cut order, clip-sized. Each sheet also lists exactly which approved reference images to attach. Index: [Document 12](12-scene-by-scene-prompts.md).
+
+### ▶ n8n automation — `n8n/`
+**Render pipeline on autopilot.** Three import-ready n8n workflows with every connection pre-wired: `TLG 01` reads `TODO` rows from a Google Sheet, makes the still with Gemini, animates it with Veo, uploads both to Drive and writes `DONE`/`FAILED` back to the sheet — per-shot error handling included, one bad shot never kills the run. `TLG 02` sends Telegram alerts on crashes; `TLG 03` is a one-URL QC approve/reject webhook. Setup guide (Hinglish, Step 0 → 10) in [n8n/README.md](n8n/README.md); sheet template with 6 example shots in `n8n/render-tracker-sheet-template.csv`.
 
 ### ▶ Paste-ready prompt pack — `prompts-flow/`
 **440 clips, each sized for one 8-second generation.** Open `prompts-flow/scene-01.txt`, copy a block, paste it into Google Flow. Shots longer than 8 seconds are pre-split into evenly sized parts with beat instructions (begin / continue / resolve) so the movement stays unbroken. `prompts-flow/shots.csv` is the same data as a spreadsheet for batch or API work. Full walkthrough in [Document 11](11-how-to-generate.md).
@@ -57,6 +61,8 @@ The step-by-step: what to open, what to paste, in what order, and what to do wit
 | `tools/build-flow-pack.mjs` | Regenerates `prompts-flow/` — 440 clip-sized prompts + `shots.csv` |
 | `tools/build-scene-prompts.mjs` | Regenerates `prompts-scene/` and Document 12 — 30 scene sheets |
 | `tools/build-render-tracker.mjs` | Regenerates `data/render-tracker.csv` — 440-row TODO list for the generation phase |
+| `n8n/` | **Complete n8n automation package** — 3 import-ready workflows, `render-tracker-full.csv` (440-row Google Sheet, prompts filled), Hinglish setup guide |
+| `tools/build-n8n-sheet.mjs` | Regenerates `n8n/render-tracker-full.csv` from `prompts-flow/shots.csv` |
 | `tools/helmet-cam-degrade.sh` | Deterministic Scene 15 helmet-cam treatment: `tools/helmet-cam-degrade.sh SRC DST` |
 | `tools/lib-prompt.mjs` | Shared character cards, location cards, style and negative lines used by both prompt packs |
 
@@ -120,6 +126,7 @@ node tools/build-prompts.mjs        # → 06-shot-list.md, 09-veo-prompts.md, da
 node tools/build-flow-pack.mjs      # → prompts-flow/
 node tools/build-scene-prompts.mjs  # → prompts-scene/, 12-scene-by-scene-prompts.md
 node tools/build-render-tracker.mjs # → data/render-tracker.csv
+node tools/build-n8n-sheet.mjs      # → n8n/render-tracker-full.csv (440-row Google Sheet for the n8n pipeline)
 ```
 
 Edit the JSON in `data/`, never the generated markdown. The compact character and location cards shared by both prompt packs live in `tools/lib-prompt.mjs`; the full archival identity blocks, film grammar and the global negative prompt live at the top of `tools/build-prompts.mjs` — change them there once and all 306 prompts update consistently.
